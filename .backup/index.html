@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revival (Demo Design)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <img src="assets/revival.png" alt="disco" id="disco">
+      <div class="brand">Revival</div>
+      <label class="burger" for="burger">
+        <input type="checkbox" id="burger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>      
+    </div>
+    <nav id="nav-menu">
+      <button class="close-btn" onclick="toggleMenu()">Close</button>
+      <a href="#main">Home</a>
+      <a href="#vmenu">Visual Menu</a>
+      <a href="#about">About Us</a>
+      <a href="#recup">Recup</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#ticket">Tickets</a>
+    </nav>
+  </header>
+
+  <div id="wrapper">
+    <div class="section main" id="main">
+      <h1>Revival</h1>
+      <button class="arrow arrow-right" onclick="navigateTo('vmenu')">→</button>
+    </div>
+
+    <div class="section vmenu" id="vmenu">
+      <button class="arrow arrow-left" onclick="navigateTo('main')">←</button>
+      <h1>Visual Menu</h1>
+      <button class="arrow arrow-right" onclick="navigateTo('about')">→</button>
+    </div>
+
+    <div class="section about" id="about">
+      <button class="arrow arrow-left" onclick="navigateTo('vmenu')">←</button>
+      <h1>About</h1>
+      <!-- Content of About section -->
+      <button class="arrow arrow-right" onclick="navigateTo('recup')">→</button>
+    </div>
+
+    <div class="section recup" id="recup">
+      <button class="arrow arrow-left" onclick="navigateTo('about')">←</button>
+      <h1>Recup</h1>
+      <!-- Content of Recup section -->
+      <button class="arrow arrow-right" onclick="navigateTo('schedule')">→</button>
+    </div>
+
+    <div class="section schedule" id="schedule">
+      <button class="arrow arrow-left" onclick="navigateTo('recup')">←</button>
+      <h1>Schedule</h1>
+      <!-- Content of Schedule section -->
+      <button class="arrow arrow-right" onclick="navigateTo('ticket')">→</button>
+    </div>
+
+    <div class="section ticket" id="ticket">
+      <button class="arrow arrow-left" onclick="navigateTo('schedule')">←</button>
+      <h1>Tickets</h1>
+      <!-- Content of Tickets section -->
+    </div>
+  </div>
+
+  <script>
+    function toggleMenu() {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.toggle('active');
+    const burgerInput = document.getElementById('burger');
+    if (nav.classList.contains('active')) {
+        burgerInput.checked = true;
+    } else {
+        burgerInput.checked = false;
+    }
+}
+
+function navigateTo(sectionId) {
+    const wrapper = document.getElementById('wrapper');
+    const section = document.getElementById(sectionId);
+    const offset = section.offsetLeft;
+    wrapper.style.transform = `translateX(-${offset}px)`;
+
+    // Close the menu when navigating
+    const nav = document.getElementById('nav-menu');
+    nav.classList.remove('active');
+    document.getElementById('burger').checked = false;
+}
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+    const nav = document.getElementById('nav-menu');
+    nav.classList.remove('active');
+    const burgerInput = document.getElementById('burger');
+    burgerInput.checked = false;
+});
+  </script>
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revival (Demo)</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="wide-screen">
+        <header class="header">
+            <div class="header-container">
+              <img src="assets/revival.png" alt="disco" id="disco">
+              <div class="brand"></div>
+              <label class="burger" for="burger">
+                <input type="checkbox" id="burger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>      
+            </div>
+            <nav id="nav-menu">
+              <button class="close-btn" onclick="toggleMenu()">Close</button>
+              <a href="#main">Home</a>
+              <a href="#about">About Us</a>
+              <a href="#games">Recup</a>
+              <a href="#ticket">Tickets</a>
+              <h6>SMA Regina Pacis Bogor</h6>
+            </nav>
+          </header>
+
+          <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                  <feBlend in="SourceGraphic" in2="goo" />
+                </filter>
+              </defs>
+            </svg>
+            <div class="gradients-container">
+              <div class="g1"></div>
+              <div class="g2"></div>
+              <div class="g3"></div>
+              <div class="g4"></div>
+              <div class="g5"></div>
+              <div class="interactive"></div>
+            </div>
+          </div>
+
+        <div id="main">
+            <div id="clouds">
+                <div class="cloud x1"></div>
+                <!-- Time for multiple clouds to dance around -->
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+            </div>
+            <div class="text-container">
+                <div class="container" id="container1">
+                    <div class="text">
+                        <h1 id="front" onclick="showSurprise()">Revival</h1>
+                        <a href="#games" class="button">
+                            <button>
+                                <h1>R E C U P</h1>
+                                <div id="clip">
+                                    <div id="leftTop" class="corner"></div>
+                                    <div id="rightBottom" class="corner"></div>
+                                    <div id="rightTop" class="corner"></div>
+                                    <div id="leftBottom" class="corner"></div>
+                                </div>
+                                <span id="rightArrow" class="arrow"></span>
+                                <span id="leftArrow" class="arrow"></span>
+                            </button>
+                        </a>
+                        <div class="box">
+                            <div class="con">
+                                <h3>Opening Time</h3>
+                                <button class="boton-elegante">Explore</button>
+                            </div>
+                            <div class="con">
+                                <h3>Closing Time</h3>
+                                <button class="boton-elegante">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+              </div>
+
+              <!-- <div class="container" id="container2">
+
+              </div> -->
+            </div>
+        </div>
+
+        <div id="vmenu">
+            <div class="title">
+                <h1 class="color-title">LOOK AT THIS</h1>
+            </div>
+            <div class="wrapper">
+                <div class="container">
+                    <input type="radio" name="slide" id="c1" checked>
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4>Competitions</h4>
+                                <p>Lihatlah kompetisi yang dapat kalian ikuti!</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c2" >
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon">2</div>
+                            <div class="description">
+                                <h4>Concerts</h4>
+                                <p>Pasti seru-seru acara nya!!!</p>
+                            </div>
+                        </div>
+                    </label>
+                    <input type="radio" name="slide" id="c3" >
+                    <label for="c3" class="card">
+                        <div class="row">
+                            <div class="icon">3</div>
+                            <div class="description">
+                                <h4>Ticket</h4>
+                                <p>Ayo! Bergabunglah dan nikmati ini bersama.</p>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div id="about">
+            <div class="container">
+                <div class="title">
+                    <h1 class="color-title">About Us</h1>
+                </div>
+                <div class="boxes">
+                    <div class="box" id="top">
+                        <img src="images/mam_nora.JPG" alt="mam" class="img-about">
+                        <div class="text">
+                            <h1> WELCOME TO REVIVAL</h1>
+                            <p>Selamat datang di website kami!  Kami bangga memperkenalkan diri sebagai bagian dari OSIS tahun ajaran 2023-2024. </p>
+                        </div>
+                    </div>
+                    <div class="box" id="first-m">
+                        <div class="text">
+                            <p> Tim kami mengelola platform ini untuk memberikan informasi terkini tentang "Pensi."  Baik Anda seorang pelajar, orang tua, atau anggota dewan guru, Anda akan menemukan sumber daya dan pembaruan berharga di sini.  </p>
+                        </div>
+                        <img src="images/panitia.JPG" alt="mam" class="img-about">
+                    </div>
+                    <div class="box" id="sec-m">
+                        <img src="images/sherryl.JPG" alt="mam" class="img-about">
+                        <div class="text">
+                            <p>Misi kami adalah memastikan bahwa setiap orang tetap mendapat informasi dan terhubung dengan kejadian dan peluang terkini dalam komunitas kami.</p>
+                        </div>
+                    </div>
+                    <div class="box" id="bottom">
+                        <div class="text">
+                            <p>Silahkan... Nikmatilah acara ini, ikuti semua kegiatan kami dengan penuh semangat. Kami sangat menantikan kedatangan kalian!</p>
+                            <p> Terima kasih telah berkunjung, dan kami harap situs web kami bermanfaat dan informatif!</p>
+                        </div>
+                        <img src="images/audience.JPG" alt="mam" class="img-about">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="games">
+            <h1 class="color-title">Recup</h1>
+
+            <div class="slider">
+                <div class="item" id="5">
+                    <div class="tex-con">
+                     <div class="img">
+                        <img src="images/basketball-svgrepo-com.svg" alt="#" class="img"/>
+                     </div>
+                     <h3 style="text-align: center;">Basket</h3>
+                     <p style="font-size: 25px;">Become The Next Kobe. RIP GOAT</p>
+                    </div>
+                </div>
+                <div class="item" id="6">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/esport.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">E-Sport</h3>
+                        <p style="font-size: 25px;">Uchiha Kairi. Ayolah Onic menang M6</p>
+                       </div>
+                </div>
+                <div class="item" id="7">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/drumset.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Band</h3>
+                        <p style="font-size: 25px;">"Entah dimana... Diriku.. Berada..</p>
+                       </div>
+                </div>
+                <div class="item " id="8">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/volley.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Volley</h3>
+                        <p style="font-size: 25px;">Smash, Block, Pass.. SERVISSS</p>
+                       </div>
+                </div>
+                <div class="item " id="1">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/football.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Futsal</h3>
+                        <p style="font-size: 25px;">"Messi! Ankara Messi.... Ankara Messi... Messi... Messi.. GOLLLLLL!!!! SIUUUUU"</p>
+                       </div>
+                </div>
+                <div class="item " id="2">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/dance.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Modern Dance</h3>
+                        <p style="font-size: 25px;">"Lisa, can you teach me Japanese?" I said "Hait, Hait"</p>
+                       </div>
+                </div>
+                <div class="item " id="3">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/debate.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">English Debate</h3>
+                        <p style="font-size: 25px;">Donald Trump Vs Joe Biden</p>
+                       </div>
+                </div>
+                <div class="item " id="4">
+                    <div class="tex-con">
+                        <div class="img">
+                            <img src="images/paintbrush.svg" alt="#" class="img"/>
+                        </div>
+                        <h3 style="text-align: center;">Poster</h3>
+                        <Leonardo style="font-size: 25px;">Leonardo Di Caprio</p>
+                       </div>
+                </div>
+                <button id="next">></button>
+                <button id="prev"><</button>
+            </div>
+        </div>
+
+        <div id="concert">
+            <div class="display" id="ot">
+                <div class="title">
+                    <h1>Opening</h1>
+                    <h1>Time</h1>
+                </div>
+                <div class="img" id="artis-open">
+
+                </div>
+                <div class="info">
+                    <h2>Time : 08.00 WIB</h2>
+                    <h2>Location : Lapangan SMA Regina Pacis</h2>
+                </div>
+            </div>
+            <div class="display" id="ct">
+                <div class="title">
+                    <h1>Closing</h1>
+                    <h1>Time</h1>
+                </div>
+                <div class="img" id="artis-close">
+                    
+                </div>
+                <div class="info">
+                    <h2>Time : 08.00 WIB</h2>
+                    <h2>Location : Lapangan SMA Regina Pacis</h2>
+                </div>
+            </div>
+        </div>
+
+        <div id="schedule">
+            <div class="title">
+                <h1 class="color-title"> Schedule </h1>
+            </div>
+            <div class="sche">
+
+            </div>
+        </div>
+
+        <div id="shop">
+            <div class="title">
+                <h1 class="color-title">BELU YUK!!</h1>
+            </div>
+
+            <div class="items">
+                <div class="img-container">
+                    <img src="assets/bracelet blue.png" alt="blue">
+                    <img src="assets/bracelet red.png" alt="green">
+                    <img src="assets/bracelet green.png" alt="red">
+                </div>
+            </div>
+            <div class="button">
+                <a class="fancy" href="#">
+                    <span class="top-key"></span>
+                    <span class="text">Buy Tickets</span>
+                    <span class="bottom-key-1"></span>
+                    <span class="bottom-key-2"></span>
+                  </a>
+            </div>
+        </div>
+
+        <footer id="footer">
+            <div id="footer-container">
+                <div id="footer-about">
+                    <h2>About Us</h2>
+                    <p>Revival is dedicated to bringing you the best in sports, e-sports, and music competitions. Join us for an unforgettable experience.</p>
+                </div>
+                <div id="footer-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#main">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#games">Competitions</a></li>
+                        <li><a href="#tickets">Shop</a></li>
+                    </ul>
+                </div>
+                <div id="footer-follow">
+                    <h2>Follow Us</h2>
+                    <div id="footer-social-links">
+                        <a href="https://www.instagram.com/recisshs"><i class="fab fa-instagram"></i></a>
+                        <img src="assets/mc.png" alt="minecraft" id="minecraft" onclick="playMinecraft()" style="cursor: pointer;">
+                    </div>
+                </div>
+                <div id="footer-contact">
+                    <h2>Contact Us</h2>
+                    <p>Email: info@reginapacis.sch.id</p>
+                    <p>Phone: +62 813-7657-7324</p>
+                    <p>Address: SMA Regina Pacis Bogor</p>
+                </div>
+            </div>
+            <div id="footer-bottom">
+                <p>&copy; 2024 Revival. All rights reserved.</p>
+                <p>Achira Studios</p>
+            </div>
+        </footer>         
+    </div>
+
+    <script src="script2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.header');
+            let lastScrollTop = 0;
+
+            window.addEventListener('scroll', () => {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                if (scrollTop > lastScrollTop) {
+                    header.classList.add('hidden');
+                } else {
+                    header.classList.remove('hidden');
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script src="https://kit.fontawesome.com/0684572857.js" crossorigin="anonymous"></script>
+</body>
+</html>
