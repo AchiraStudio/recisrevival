@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (element) {
                 element.style.color = randomColor;
                 element.style.textShadow = `
-                    0 0 2px ${randomColor},
-                    0 0 2px ${randomColor},
-                    0 0 2px ${randomColor},
-                    0 0 2px ${randomColor},
-                    0 0 2px ${randomColor},
-                    0 0 2px ${randomColor}
+                    0 0 0px ${randomColor},
+                    0 0 0px ${randomColor},
+                    0 0 0px ${randomColor},
+                    0 0 0px ${randomColor},
+                    0 0 0px ${randomColor},
+                    0 0 0px ${randomColor}
                 `;
             }
         }, 800); // change color every 0.8 seconds
@@ -79,3 +79,11 @@ function setRandomBackgrounds() {
 }
 
 window.onload = setRandomBackgrounds;
+
+function unavailable() {
+  window.location.href = "extra/unavailable.html"
+}
+
+function shop() {
+  window.location.href = "https://www.youtube.com/"
+}
