@@ -1,0 +1,15 @@
+#schedule {
+    margin-top: 5%;
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+#schedule .sche {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
