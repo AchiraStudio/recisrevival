@@ -910,6 +910,12 @@ background-image: url('images/concert.png');
 background-image: url('images/ticket.png');
 }
 
+.bg-vmenu {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 /* end */
 
 .bg {

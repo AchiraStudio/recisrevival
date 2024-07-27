@@ -107,21 +107,21 @@ const prev = document.getElementById('prev');
 
 if (next) {
     next.onclick = () => {
-        active = active + 1 < items.length ? active + 1 : active;
+        active = active + 1 < items.length ? active + 1 : 0; // Wrap around to the first item
         loadShow();
     };
 }
 
 if (prev) {
     prev.onclick = () => {
-        active = active - 1 >= 0 ? active - 1 : active;
+        active = active - 1 >= 0 ? active - 1 : items.length - 1; // Wrap around to the last item
         loadShow();
     };
 }
 
 function randomColor(type) {
   var c;
-  if(type == "bright") {
+  if (type == "bright") {
     c = randomNumber(130, 255);
   } else {
     c = randomNumber(110, 190);
