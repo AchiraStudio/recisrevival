@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  
     function changeColor(element) {
         setInterval(() => {
             let randomColor = getRandomColor();
@@ -48,7 +50,7 @@ const window4 = document.querySelector('#four');
 }
 
 function setRandomBackgrounds() {
-  for (let i = 1; i <= 8; i++) {
+  for (let i = 1; i <= 99999; i++) {
     const div = document.getElementById(i.toString());
     if (div) {
       const bgColor = getRandomColor();

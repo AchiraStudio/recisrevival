@@ -817,6 +817,7 @@ text-align: center;
   background: linear-gradient(0deg, rgba(122,57,35,1) 0%, rgba(180,97,20,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a3923",endColorstr="#b46114",GradientType=1);
   z-index: 10;
+  position: relative;
 }
 
 #vmenu .wrapper {
@@ -914,6 +915,23 @@ background-image: url('images/ticket.png');
   position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+}
+
+.bg-vmenu .left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  margin-left: 5%;
+}
+
+.bg-vmenu .right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  margin-right: 5%;
 }
 
 /* end */
@@ -1076,8 +1094,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a3923",endCo
 }
 /* Games */
 
+#games .sign-games {
+  position: absolute;
+  width: 400px;
+}
+
 #games{
 min-height: 100vh;
+position: relative;
 width: 100%;
 margin: 0;
 display: flex;
