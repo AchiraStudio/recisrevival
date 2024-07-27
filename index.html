@@ -53,6 +53,11 @@
           </div>
 
         <div id="main">
+            <div class="bg-main">
+                <img src="design elements PENSI/palm tree.PNG" alt="palm" class="palm-left">
+                <img src="design elements PENSI/palm tree.PNG" alt="palm" class="palm-right">
+            </div>
+            
             <div id="clouds">
                 <div class="cloud x1"></div>
                 <!-- Time for multiple clouds to dance around -->
@@ -64,9 +69,9 @@
             <div class="text-container">
                 <div class="container" id="container1">
                     <div class="text">
-                        <h1 id="front" onclick="showSurprise()">Revival</h1>
+                        <h1 id="front" onclick="showSurprise()"><img src="design elements PENSI/Logo revival.PNG" alt="revive" class="revival"></h1>
                         <a href="#games" class="button">
-                            <button>
+                            <!-- <button>
                                 <h1>R E C U P</h1>
                                 <div id="clip">
                                     <div id="leftTop" class="corner"></div>
@@ -76,7 +81,7 @@
                                 </div>
                                 <span id="rightArrow" class="arrow"></span>
                                 <span id="leftArrow" class="arrow"></span>
-                            </button>
+                            </button> -->
                         </a>
                     </div>
               </div>
@@ -178,8 +183,8 @@
                          <div class="img">
                             <img src="images/basketball-svgrepo-com.svg" alt="#" class="img"/>
                          </div>
-                         <h3 style="text-align: center;">Basket</h3>
-                         <button class="btn"> Sign Me In!</button>
+                         <h3 style="text-align: center;">Basket Putra & Putri</h3>
+                         <button class="btn" onclick="basket()"> Sign Me In!</button>
                          <!-- <p style="font-size: 25px;">Become The Next Kobe. RIP GOAT</p> -->
                         </div>
                     </div>
@@ -188,8 +193,18 @@
                             <div class="img">
                                 <img src="images/esport.svg" alt="#" class="img"/>
                             </div>
-                            <h3 style="text-align: center;">E-Sport</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <h3 style="text-align: center;">E-Sport SMA</h3>
+                            <button class="btn" onclick="esportsma()"> Sign Me In!</button>
+                            <!-- <p style="font-size: 25px;">Uchiha Kairi. Ayolah Onic menang M6</p> -->
+                           </div>
+                    </div>
+                    <div class="item" id="9">
+                        <div class="tex-con">
+                            <div class="img">
+                                <img src="images/esport.svg" alt="#" class="img"/>
+                            </div>
+                            <h3 style="text-align: center;">E-Sport SMP</h3>
+                            <button class="btn" onclick="esportsmp()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">Uchiha Kairi. Ayolah Onic menang M6</p> -->
                            </div>
                     </div>
@@ -199,7 +214,7 @@
                                 <img src="images/drumset.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">Band</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="band()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">"Entah dimana... Diriku.. Berada..</p> -->
                            </div>
                     </div>
@@ -209,7 +224,7 @@
                                 <img src="images/volley.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">Volley</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="volley()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">Smash, Block, Pass.. SERVISSS</p> -->
                            </div>
                     </div>
@@ -219,7 +234,7 @@
                                 <img src="images/football.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">Futsal</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="futsal()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">"Messi! Ankara Messi.... Ankara Messi... Messi... Messi.. GOLLLLLL!!!! SIUUUUU"</p> -->
                            </div>
                     </div>
@@ -229,7 +244,7 @@
                                 <img src="images/dance.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">Modern Dance</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="md()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">"Lisa, can you teach me Japanese?" I said "Hait, Hait"</p> -->
                            </div>
                     </div>
@@ -239,7 +254,7 @@
                                 <img src="images/debate.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">English Debate</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="ed()"> Sign Me In!</button>
                             <!-- <p style="font-size: 25px;">Donald Trump Vs Joe Biden</p> -->
                            </div>
                     </div>
@@ -249,19 +264,12 @@
                                 <img src="images/paintbrush.svg" alt="#" class="img"/>
                             </div>
                             <h3 style="text-align: center;">Poster</h3>
-                            <button class="btn"> Sign Me In!</button>
+                            <button class="btn" onclick="poster()"> Sign Me In!</button>
                             <!-- <Leonardo style="font-size: 25px;">Leonardo Di Caprio</p> -->
                            </div>
                     </div>
                     <button id="next">></button>
                     <button id="prev"><</button>
-                </div>
-
-                <div class="guidebook">
-                    <div class="title-gb">
-                        <h1>Yaa... Yuk</h1>
-                    <h1>Kita Ikuti Aturan</h1>
-                    </div>
                 </div>
             </div>
         </div>
@@ -339,7 +347,7 @@
                         <li><a href="#main">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#games">Competitions</a></li>
-                        <li><a href="#shop">Shop</a></li>
+                        <!-- <li><a href="#shop">Shop</a></li> -->
                     </ul>
                 </div>
                 <div id="footer-follow">
@@ -381,6 +389,7 @@
             });
         });
     </script>
+    <script src="script3.js"></script>
     <script src="https://kit.fontawesome.com/0684572857.js" crossorigin="anonymous"></script>
 </body>
 </html>

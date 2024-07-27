@@ -1,26 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const h1Elements = [
-      document.querySelector('#wide-screen #main .text #front'),
-      document.querySelector('#wide-screen #vmenu .title h1'),
-      document.querySelector('#wide-screen #about .title h1'),
-      document.querySelector('#wide-screen #games h1'),
-      document.querySelector('#wide-screen #schedule .title h1'),
-      document.querySelector('#wide-screen #shop .title h1')
-    ];
-  
-    let colors = [
-        '#FF69B4', '#FFC107', '#FFD700', '#FFFF00', '#33CC33',
-        '#00FFFF', '#66CCCC', '#FF99CC', '#FFA07A', '#FFC0CB',
-        '#ADD8E6', '#7FFD00', '#FF69B4', '#FFA500', '#FFFF99',
-        '#CCFF00', '#33FF00', '#00FF00', '#66FF00', '#CCFFFF',
-        '#99FF99', '#66CCCC', '#33CCCC', '#0099FF', '#0066FF',
-        '#0033FF'
-    ];
-  
-    function getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
-    }
-  
     function changeColor(element) {
         setInterval(() => {
             let randomColor = getRandomColor();
