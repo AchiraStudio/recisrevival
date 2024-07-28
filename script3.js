@@ -33,3 +33,28 @@ function esportsmp() {
 function futsal() {
     window.location.href = "https://forms.gle/fxJGerB17ZYbQeuE7"
 }
+// Change Image
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('#vmenu .container .img');
+    let currentImageIndex = 0;
+    const totalImages = images.length;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextImage() {
+      images[currentImageIndex].classList.remove('active');
+      currentImageIndex = (currentImageIndex + 1) % totalImages;
+      images[currentImageIndex].classList.add('active');
+    }
+
+    // Show the first image initially
+    showImage(currentImageIndex);
+
+    // Change image every 5 seconds
+    setInterval(nextImage, 5000);
+  });

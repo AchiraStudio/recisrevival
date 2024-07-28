@@ -76,3 +76,7 @@ function unavailable() {
 function shop() {
   window.location.href = "https://www.youtube.com/"
 }
+
+function mainDown() {
+  window.location.href = "#vmenu"
+}

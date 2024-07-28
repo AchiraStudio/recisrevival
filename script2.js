@@ -15,25 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-    // Gradient Movement
-    const interBubble = document.querySelector('.interactive');
-    if (interBubble) {
-        let curX = 0, curY = 0, tgX = 0, tgY = 0;
+    //Change slider document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#vmenu .container input[type="radio"]');
+    const totalSlides = slides.length;
+    const interval = 3000; // Time in milliseconds for each slide
 
-        function move() {
-            curX += (tgX - curX) / 20;
-            curY += (tgY - curY) / 20;
-            interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-            requestAnimationFrame(move);
-        }
-
-        window.addEventListener('mousemove', event => {
-            tgX = event.clientX;
-            tgY = event.clientY;
-        });
-
-        move();
+    function showNextSlide() {
+      slides[currentSlide].checked = false;
+      currentSlide = (currentSlide + 1) % totalSlides;
+      slides[currentSlide].checked = true;
     }
+
+    setInterval(showNextSlide, interval);
 
     // Burger Nav Menu
     const closeBtn = document.querySelector('.close-btn');

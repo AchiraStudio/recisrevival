@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revival (Demo)</title>
+    <title>Revival</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="script.js" defer></script>
@@ -70,19 +70,9 @@
                 <div class="container" id="container1">
                     <div class="text">
                         <h1 id="front" onclick="showSurprise()"><img src="design elements PENSI/Logo revival.PNG" alt="revive" class="revival"></h1>
-                        <a href="#games" class="button">
-                            <!-- <button>
-                                <h1>R E C U P</h1>
-                                <div id="clip">
-                                    <div id="leftTop" class="corner"></div>
-                                    <div id="rightBottom" class="corner"></div>
-                                    <div id="rightTop" class="corner"></div>
-                                    <div id="leftBottom" class="corner"></div>
-                                </div>
-                                <span id="rightArrow" class="arrow"></span>
-                                <span id="leftArrow" class="arrow"></span>
-                            </button> -->
-                        </a>
+                        <button class="btn-main" onclick="mainDown()">
+                            Explore Now!
+                        </button>
                     </div>
               </div>
 
@@ -96,6 +86,18 @@
             <div class="bg-vmenu">
                 <img src="design elements PENSI/eiffel.PNG" alt="eiffel" class="left">
                 <img src="design elements PENSI/liberty.PNG" alt="liberty" class="right">
+                <div class="road">
+                    <img src="assets/small car.svg" alt="car" class="left">
+                    <img src="assets/small car.svg" alt="car" class="left">
+                    <img src="assets/small car.svg" alt="car" class="right">
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                    <div class="stripe"></div>
+                </div>
             </div>
             <div class="title">
                 <h1 class="color-title">LOOK AT THIS</h1>
@@ -179,7 +181,13 @@
             </div>
     
             <div id="games">
-                <h1><img src="design elements PENSI/sin=gn.PNG" alt="sign" class="sign-games"></h1>
+                <h1>
+                    <img src="design elements PENSI/sign1.PNG" alt="sign" class="sign-games" id="one">
+                    <img src="design elements PENSI/sign2.PNG" alt="sign" class="sign-games" id="two">
+                    <img src="design elements PENSI/sign3.PNG" alt="sign" class="sign-games" id="three">
+                    <img src="design elements PENSI/sign4.PNG" alt="sign" class="sign-games" id="four">
+                    <img src="design elements PENSI/sign5.PNG" alt="sign" class="sign-games" id="five">
+                </h1>
     
                 <div class="slider">
                     <div class="item" id="5">
@@ -278,7 +286,7 @@
             </div>
         </div>
 
-        <div id="concert">
+        <!-- <div id="concert">
             <div class="display" id="ot">
                 <div class="title">
                     <h1>Opening</h1>
@@ -314,7 +322,7 @@
             <div class="sche">
 
             </div>
-        </div>
+        </div> -->
 
         <!-- <div id="shop">
 
@@ -357,7 +365,7 @@
                 <div id="footer-follow">
                     <h2>Follow Us</h2>
                     <div id="footer-social-links">
-                        <a href="https://www.instagram.com/recisshs"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/recisrevival?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
                         <img src="assets/mc.png" alt="minecraft" id="minecraft" onclick="playMinecraft()" style="cursor: pointer;">
                     </div>
                 </div>
