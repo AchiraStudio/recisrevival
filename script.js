@@ -80,3 +80,15 @@ function shop() {
 function mainDown() {
   window.location.href = "#vmenu"
 }
+
+function gotoHome() {
+  window.location.href = "#main"
+}
+
+function gotoAbout() {
+  window.location.href = "#about"
+}
+
+function gotoGames() {
+  window.location.href = "#games"
+}
