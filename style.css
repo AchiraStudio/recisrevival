@@ -461,11 +461,11 @@ nav a:hover {
 	align-items: center;
 	min-height: 100vh;
 	overflow-x: hidden;
-	background: rgb(255,65,2);
-	background: -moz-linear-gradient(180deg, rgba(255,65,2,1) 0%, rgba(180,97,20,1) 100%);
-	background: -webkit-linear-gradient(180deg, rgba(255,65,2,1) 0%, rgba(180,97,20,1) 100%);
-	background: linear-gradient(180deg, rgba(255,65,2,1) 0%, rgba(180,97,20,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff4102",endColorstr="#b46114",GradientType=1);
+	background: rgb(162,162,255);
+background: -moz-linear-gradient(180deg, rgba(162,162,255,1) 0%, rgba(217,208,244,1) 39%, rgba(245,198,151,1) 79%, rgba(226,175,107,1) 96%);
+background: -webkit-linear-gradient(180deg, rgba(162,162,255,1) 0%, rgba(217,208,244,1) 39%, rgba(245,198,151,1) 79%, rgba(226,175,107,1) 96%);
+background: linear-gradient(180deg, rgba(162,162,255,1) 0%, rgba(217,208,244,1) 39%, rgba(245,198,151,1) 79%, rgba(226,175,107,1) 96%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a2a2ff",endColorstr="#e2af6b",GradientType=1);
 	z-index: 4;
 }
 #wide-screen #main .text .revival {
@@ -965,11 +965,11 @@ nav a:hover {
 	justify-content: center;
 	align-items: center;
 	font-family: monospace;
-	background: rgb(23,28,98);
-	background: -moz-linear-gradient(0deg, #171c62 0%, rgba(28,30,84,1) 43%, rgba(22,20,36,1) 100%);
-	background: -webkit-linear-gradient(0deg, rgba(23,28,98,1) 0%, rgba(28,30,84,1) 43%, rgba(22,20,36,1) 100%);
-	background: linear-gradient(0deg, rgba(23,28,98,1) 0%, rgba(28,30,84,1) 43%, rgba(22,20,36,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#171c62",endColorstr="#161424",GradientType=1);
+	background: rgb(85,24,149);
+background: -moz-linear-gradient(0deg, rgba(85,24,149,1) 0%, rgba(80,59,186,1) 39%, rgba(218,147,75,1) 79%, rgba(226,175,107,1) 96%);
+background: -webkit-linear-gradient(0deg, rgba(85,24,149,1) 0%, rgba(80,59,186,1) 39%, rgba(218,147,75,1) 79%, rgba(226,175,107,1) 96%);
+background: linear-gradient(0deg, rgba(85,24,149,1) 0%, rgba(80,59,186,1) 39%, rgba(218,147,75,1) 79%, rgba(226,175,107,1) 96%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#551895",endColorstr="#e2af6b",GradientType=1);
 	z-index: 3;
 	overflow-x: hidden;
 }
@@ -1001,6 +1001,127 @@ nav a:hover {
 	text-align: center;
 	z-index: 2;
 }
+
+/* Guidebook */
+.buttongb {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	background: none;
+	color: #0f1923;
+	cursor: pointer;
+	position: relative;
+	padding: 8px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+	transition: all .15s ease;
+  }
+  
+  .buttongb::before,
+  .buttongb::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: calc(50% - 5px);
+	border: 1px solid #7D8082;
+	transition: all .15s ease;
+  }
+  
+  .buttongb::before {
+	top: 0;
+	border-bottom-width: 0;
+  }
+  
+  .buttongb::after {
+	bottom: 0;
+	border-top-width: 0;
+  }
+  
+  .buttongb:active,
+  .buttongb:focus {
+	outline: none;
+  }
+  
+  .buttongb:active::before,
+  .buttongb:active::after {
+	right: 3px;
+	left: 3px;
+  }
+  
+  .buttongb:active::before {
+	top: 3px;
+  }
+  
+  .buttongb:active::after {
+	bottom: 3px;
+  }
+  
+  .button_lg {
+	position: relative;
+	display: block;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: #0f1923;
+	overflow: hidden;
+	box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 2px;
+	background-color: #0f1923;
+  }
+  
+  .button_lg::after {
+	content: '';
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 4px;
+	height: 4px;
+	background-color: #0f1923;
+	transition: all .2s ease;
+  }
+  
+  .button_sl {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: -1px;
+	left: -8px;
+	width: 0;
+	background-color: #ff4655;
+	transform: skew(-15deg);
+	transition: all .2s ease;
+  }
+  
+  .button_text {
+	position: relative;
+  }
+  
+  .buttongb:hover {
+	color: #0f1923;
+  }
+  
+  .buttongb:hover .button_sl {
+	width: calc(100% + 15px);
+  }
+  
+  .buttongb:hover .button_lg::after {
+	background-color: #fff;
+  }
+  
 /* Button */
 .btn {
 	margin-top: 7%;
