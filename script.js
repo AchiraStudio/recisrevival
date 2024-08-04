@@ -74,7 +74,7 @@ function unavailable() {
 }
 
 function mainDown() {
-  window.location.href = "#vmenu"
+  window.location.href = "#games"
 }
 
 function gotoHome() {
