@@ -73,10 +73,6 @@ function unavailable() {
   window.location.href = "extra/unavailable.html"
 }
 
-function shop() {
-  window.location.href = "https://www.youtube.com/"
-}
-
 function mainDown() {
   window.location.href = "#vmenu"
 }
@@ -92,3 +88,16 @@ function gotoAbout() {
 function gotoGames() {
   window.location.href = "#games"
 }
+
+const header = document.getElementsByClassName('header');
+const hideHeight = 100; // Adjust the height at which the header should hide
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > hideHeight) {
+        header.style.top = '-60px'; // Adjust according to header height
+    } else {
+        header.style.top = '0';
+    }
+});
