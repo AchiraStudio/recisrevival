@@ -86,95 +86,6 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.gradient-bg {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	overflow: hidden;
-	background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
-	top: 0;
-	left: 0;
-	z-index: -1;
-	display: none;
-}
-.gradient-bg svg {
-	display: none;
-}
-.gradient-bg .gradients-container {
-	filter: url(#goo) blur(40px);
-	width: 100%;
-	height: 100%;
-}
-.gradient-bg .g1 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color1), 0.8) 0, rgba(var(--color1), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: center center;
-	animation: moveVertical 30s ease infinite;
-	opacity: 1;
-}
-.gradient-bg .g2 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color2), 0.8) 0, rgba(var(--color2), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: calc(50% - 400px);
-	animation: moveInCircle 20s reverse infinite;
-	opacity: 1;
-}
-.gradient-bg .g3 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color3), 0.8) 0, rgba(var(--color3), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2 + 200px);
-	left: calc(50% - var(--circle-size) / 2 - 500px);
-	transform-origin: calc(50% + 400px);
-	animation: moveInCircle 40s linear infinite;
-	opacity: 1;
-}
-.gradient-bg .g4 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color4), 0.8) 0, rgba(var(--color4), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: var(--circle-size);
-	height: var(--circle-size);
-	top: calc(50% - var(--circle-size) / 2);
-	left: calc(50% - var(--circle-size) / 2);
-	transform-origin: calc(50% - 200px);
-	animation: moveHorizontal 40s ease infinite;
-	opacity: 0.7;
-}
-.gradient-bg .g5 {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color5), 0.8) 0, rgba(var(--color5), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: calc(var(--circle-size) * 2);
-	height: calc(var(--circle-size) * 2);
-	top: calc(50% - var(--circle-size));
-	left: calc(50% - var(--circle-size));
-	transform-origin: calc(50% - 800px) calc(50% + 200px);
-	animation: moveInCircle 20s ease infinite;
-	opacity: 1;
-}
-.gradient-bg .interactive {
-	position: absolute;
-	background: radial-gradient(circle at center, rgba(var(--color-interactive), 0.8) 0, rgba(var(--color-interactive), 0) 50%) no-repeat;
-	mix-blend-mode: var(--blending);
-	width: 100%;
-	height: 100%;
-	top: -50%;
-	left: -50%;
-	opacity: 0.7;
-}
 /* end */
 * {
 	margin: 0;
@@ -191,6 +102,12 @@ body {
 	background-size: cover;
 	background-position: center;
 	overflow: overlay;
+}
+
+#logo {
+	font-size: 30px;
+	font-weight: 900;
+	font-family: Poppins;
 }
 .hidden {
 	transform: translateY(-100%);
@@ -222,12 +139,14 @@ header {
 nav {
 	display: flex;
 	flex-direction: column;
-	background-color: #ebe3e3;
+	background-color: #ebe3e309;
+	backdrop-filter: blur(10px); /* Blurring effect */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
 	position: fixed;
 	top: 0;
-	right: -250px;
+	right: -350px;
 	height: 100%;
-	width: 250px;
+	width: 350px;
 	text-align: left;
 	padding-top: 60px;
 	transition: right 0.3s ease;
@@ -236,28 +155,32 @@ nav h6 {
 	text-align: center;
 	margin-top: 60%;
 	font-size: 11px;
-	color: rgb(43, 4, 40);
+	color: #d6ccd5;;
 }
 nav.active {
 	right: 0;
 }
 nav a {
-	color: rgb(43, 4, 40);
+	color: #d6ccd5;
 	text-decoration: none;
 	padding: 15px 20px;
 	font-size: 1rem;
+	text-decoration: none;
+	transition: .6s;
 }
 nav a:hover {
-	text-decoration: underline;
+	color: black;
+	background-color: #ffffff49;
 }
 .burger {
-	position: relative;
+	position: absolute;
 	width: 30px;
 	height: 20px;
 	background: transparent;
 	cursor: pointer;
 	display: block;
 	right: 0;
+	margin-right: 4%;
 	z-index: 100;
 }
 .burger input {
@@ -296,20 +219,19 @@ nav a:hover {
 .close-btn {
 	position: absolute;
 	top: 10px;
-	right: 10px;
+	right: 0;
+	margin-right: 17%;
 	background-color: rgb(43, 4, 40);
 	color: white;
 	border: none;
 	padding: 10px 15px;
 	cursor: pointer;
+	transition: .6s;
 }
 .close-btn:hover {
 	background-color: #e7d5d5dc;
 }
-#disco {
-	width: 160px;
-	height: 100%;
-}
+
 /* end */
 #wide-screen .menu {
 	display: none;
@@ -466,9 +388,27 @@ background: linear-gradient(180deg, rgba(187,183,255,1) 0%, rgba(223,71,11,1) 10
 	z-index: 4;
 }
 #wide-screen #main .text .revival {
+	display: inline-block;
+	transform-origin: center;
 	width: 400px;
 	height: auto;
+	transition: .6s;
+	animation-play-state: paused; 
 }
+
+#wide-screen #main .text .revival:hover {
+	animation: continuous-rotate 2s linear infinite;
+	animation-play-state: running;
+}
+@keyframes continuous-rotate {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
 #wide-screen #main .container {
 	position: absolute;
 	display: flex;
@@ -2313,4 +2253,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 		user-select: none;
 		font-size: 19px;
 	}
+}
+
+::-webkit-scrollbar {
+	display: none;
 }
