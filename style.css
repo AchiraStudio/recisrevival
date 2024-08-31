@@ -1499,6 +1499,21 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 	}
 }
 @media screen and (max-width: 431px) {
+	nav {
+		display: flex;
+		flex-direction: column;
+		background-color: #ebe3e309;
+		backdrop-filter: blur(10px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(10px); /* Safari support */
+		position: fixed;
+		top: 0;
+		right: -250px;
+		height: 100%;
+		width: 250px;
+		text-align: left;
+		padding-top: 60px;
+		transition: right 0.3s ease;
+	}
 	#wide-screen #main {
 		position: relative;
 		margin: 0;
