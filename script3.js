@@ -33,6 +33,10 @@ function esportsmp() {
 function futsal() {
     window.location.href = "https://forms.gle/fxJGerB17ZYbQeuE7"
 }
+
+function gotoRP() {
+    window.location.href = "https://reginapacis.sch.id/"
+}
 // Change Image
 
 document.addEventListener('DOMContentLoaded', () => {
