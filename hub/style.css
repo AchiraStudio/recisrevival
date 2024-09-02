@@ -10,6 +10,9 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -106,4 +109,10 @@ background: -moz-linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1
 background: -webkit-linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%, rgba(92,242,68,1) 73%, rgba(242,66,8,1) 100%);
 background: linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%, rgba(92,242,68,1) 73%, rgba(242,66,8,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endColorstr="#f24208",GradientType=1);
+}
+
+.wip {
+    position: absolute;
+    text-align: center;
+    font-size: 70px;
 }

@@ -41,6 +41,9 @@ function gotoRP() {
 function artis() {
     window.location.href = "artis/index.html"
 }
+function gotoHub() {
+    window.location.href = "hub/hub.html"
+}
 // Change Image
 
 document.addEventListener('DOMContentLoaded', () => {
