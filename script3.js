@@ -37,6 +37,10 @@ function futsal() {
 function gotoRP() {
     window.location.href = "https://reginapacis.sch.id/"
 }
+
+function artis() {
+    window.location.href = "artis/index.html"
+}
 // Change Image
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,109 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+* {
+    font-family: Poppins;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display:  flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img {
+    position: relative;
+    width: 300px;
+    height: 90%;
+    background-color: black;
+    border-radius: 50px;
+    transition: ease-in-out .4s;
+    overflow: hidden;
+}
+
+#one {
+    background: url(assets/artist-cover\(nonhver\).jpg);
+}
+
+#one:hover {
+    background: url(assets/artist-cover.jpg);
+}
+
+.img:hover {
+    width: 800px;
+    display: flex;
+}
+
+.img:hover .text {
+    display: flex;
+    color: white;
+}
+.img:hover ~ .img,
+.img:not(:hover) {
+    width: 200px; /* Shrinks all non-hovered boxes */
+}
+
+.img .text {
+    z-index: 0;
+    height: 100%;
+    width: 400px;
+    background-color: rgba(151, 124, 124, 0.192);
+    backdrop-filter: blur(5px); /* Blurring effect */
+        -webkit-backdrop-filter: blur(5px); /* Safari support */
+    position: absolute;
+    right: 0;
+    box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    transition: .5s;
+    display: none;
+}
+
+.img .text:hover {
+    width: 500px;
+    font-size: larger;
+}
+
+/* Button */
+
+button {
+    height: 50px;
+    width: 120px;
+    font-size: 20px;
+    border-radius: 20px;
+    background: rgb(232,240,42);
+background: -moz-linear-gradient(135deg, rgba(232,240,42,1) 0%, rgba(3,233,130,1) 33%, rgba(91,68,242,1) 73%, rgba(8,241,242,1) 100%);
+background: -webkit-linear-gradient(135deg, rgba(232,240,42,1) 0%, rgba(3,233,130,1) 33%, rgba(91,68,242,1) 73%, rgba(8,241,242,1) 100%);
+background: linear-gradient(135deg, rgba(232,240,42,1) 0%, rgba(3,233,130,1) 33%, rgba(91,68,242,1) 73%, rgba(8,241,242,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e8f02a",endColorstr="#08f1f2",GradientType=1);
+border: 0;
+backdrop-filter: blur(5px); /* Blurring effect */
+        -webkit-backdrop-filter: blur(5px); /* Safari support */
+        transition: .4s;
+    font-weight: 900;
+}
+
+button:hover {
+    height: 65px;
+    width: 165px;
+    font-size: 25px;
+    color: white;
+    background: rgb(95,12,122);
+background: -moz-linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%, rgba(92,242,68,1) 73%, rgba(242,66,8,1) 100%);
+background: -webkit-linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%, rgba(92,242,68,1) 73%, rgba(242,66,8,1) 100%);
+background: linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%, rgba(92,242,68,1) 73%, rgba(242,66,8,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endColorstr="#f24208",GradientType=1);
+}

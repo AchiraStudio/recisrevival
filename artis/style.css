@@ -1,0 +1,191 @@
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: bretty;
+    src: url(../fonts/bretty-i.otf);
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+    background-color: #CECECE;
+}
+
+/* top */
+
+.top {
+    margin-top: 10%;
+    position: fixed;
+    background: url(assets/bg-top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 34vh;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: -1;
+}
+
+.top .text {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(2px); /* Safari support */
+}
+.top h1 {
+    font-size: 50px;
+}
+.top h6 {
+    font-size: 15px;
+}
+
+.top-2 {
+    margin-top: 70vh;
+    position: relative;
+    background-color: #CECECE;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.top-2 img {
+    width: 80px;
+}
+
+.utama {
+    min-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.utama .ran {
+    position: relative;
+    height: 60vh;
+    background: url(assets/ran.jpg);
+    background-color: #CECECE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.utama .ran .side {
+    position: absolute;
+    right: 0;
+    width: 40vw;
+    height: 60vh;
+    background-color: #b5aeae2c;
+    backdrop-filter: blur(5px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(5px); /* Safari support */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transition: .6s;
+    opacity: 1;
+}
+
+.utama .side h1 {
+    font-family: bretty;
+    color: red;
+    transition: .6s;
+}
+
+/* Project Pop */
+
+.utama .p-pop {
+    position: relative;
+    height: 60vh;
+    background: url(assets/project-pop.jpg);
+    background-color: #CECECE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.utama .p-pop .side {
+    position: absolute;
+    left: 0;
+    width: 40vw;
+    height: 60vh;
+    background-color: #b5aeae2c;
+    backdrop-filter: blur(5px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(5px); /* Safari support */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transition: .6s;
+    opacity: 1;
+}
+
+/* Arrash&Raissa */
+
+.utama .pendamping {
+    position: relative;
+    height: 60vh;
+    background: url(assets/arrash&raissa.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.utama .pendamping .side {
+    position: absolute;
+    width: 30vw;
+    height: 60vh;
+    background-color: #b5aeae2c;
+    backdrop-filter: blur(5px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(5px); /* Safari support */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    transition: .6s;
+    opacity: 1;
+}
+
+#arrash {
+    left: 0;
+}
+
+#raissa {
+    right: 0;
+}
+
+.utama .side:hover {
+    width: 50vw;
+    backdrop-filter: blur(10px); /* Blurring effect */
+			-webkit-backdrop-filter: blur(10px); /* Safari support */
+    color: black;
+}
+
+.utama .side h1:hover {
+    font-size: 40px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

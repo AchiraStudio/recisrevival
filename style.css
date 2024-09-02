@@ -907,7 +907,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 		position: absolute;
 		width: auto;
 		height: 350px;
-		left: 0;
+		left: 0;f
 		margin-bottom: 22%;
 		bottom: 0;
 	}
@@ -975,6 +975,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 		padding-top: 60px;
 		transition: right 0.3s ease;
 	}
+
+	.bottom-nav img {
+		width: 40px;
+		height: auto;
+	}
+	
+	.bottom-nav h1 {
+		font-size: 15px;
+	}
+
 	#wide-screen #main {
 		position: relative;
 		margin: 0;
@@ -1120,6 +1130,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endCo
 		text-align: left;
 		padding-top: 60px;
 		transition: right 0.3s ease;
+	}
+	
+	.bottom-nav img {
+		width: 35px;
+		height: auto;
+	}
+	
+	.bottom-nav h1 {
+		font-size: 10px;
 	}
 
 	#wide-screen #main {
