@@ -27,7 +27,7 @@ body {
 
 .img {
     position: relative;
-    width: 34%;
+    width: 50%;
     height: 100%;
     background-color: black;
     transition: .4s;
@@ -151,7 +151,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         transition: transform 0.4s ease;
         z-index: 1;
         position: relative;
-        overflow: hidden;
+        overflow-x: hidden;
     }
 
     #one, #two, #three {
@@ -162,6 +162,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         display: flex;
         transform-origin: top;
         transition: background-color 0.4s ease, transform 0.4s ease;
+        overflow: hidden;
     }
 
     #one-android {
@@ -190,6 +191,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 1;
         opacity: 0;
         transition: opacity 0.4s ease;
+        overflow: hidden;
     }
 
     #one-android.active::before,
@@ -197,6 +199,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
     #three-android.active::before {
         opacity: 1;
         animation: fade-out 0.4s forwards;
+        overflow: hidden;
     }
 
     @keyframes fade-out {
@@ -215,6 +218,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 2;
         height: 100vh;
         width: 100%;
+        overflow: hidden;
     }
 
     #two-android.active {
@@ -223,6 +227,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 2;
         height: 100vh;
         width: 100%;
+        overflow: hidden;
     }
     
     #three-android.active {
@@ -231,6 +236,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 2;
         height: 100vh;
         width: 100%;
+        overflow: hidden;
     }
 
     /* Text styling */
@@ -251,6 +257,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         transition: .5s;
         display: none;
         z-index: 3;
+        overflow: hidden;
     }
 
     .img:hover .text {
