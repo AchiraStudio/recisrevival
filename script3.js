@@ -41,6 +41,7 @@ function gotoRP() {
 function artis() {
     window.location.href = "artis/index.html"
 }
+
 function gotoHub() {
     window.location.href = "hub/hub.html"
 }
@@ -52,15 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalImages = images.length;
 
     function showImage(index) {
-      images.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
-      });
+        images.forEach((img, i) => {
+            img.classList.toggle('active', i === index);
+        });
     }
 
     function nextImage() {
-      images[currentImageIndex].classList.remove('active');
-      currentImageIndex = (currentImageIndex + 1) % totalImages;
-      images[currentImageIndex].classList.add('active');
+        images[currentImageIndex].classList.remove('active');
+        currentImageIndex = (currentImageIndex + 1) % totalImages;
+        images[currentImageIndex].classList.add('active');
     }
 
     // Show the first image initially
@@ -68,4 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Change image every 5 seconds
     setInterval(nextImage, 5000);
-  });
+});

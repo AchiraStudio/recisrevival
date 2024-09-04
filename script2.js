@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Define the toggleMenu function
-function toggleMenu() {
-    const nav = document.getElementById('nav-menu');
-    nav.classList.toggle('active');
-    const burgerInput = document.getElementById('burger');
-    burgerInput.checked = nav.classList.contains('active');
-}
-
-// Add event listener for the burger menu
-document.addEventListener('DOMContentLoaded', () => {
-    const burgerInput = document.getElementById('burger');
-    if (burgerInput) {
-        burgerInput.addEventListener('click', toggleMenu);
+    function toggleMenu() {
+        const nav = document.getElementById('nav-menu');
+        nav.classList.toggle('active');
+        const burgerInput = document.getElementById('burger');
+        burgerInput.checked = nav.classList.contains('active');
     }
-});
+
+    // Add event listener for the burger menu
+    document.addEventListener('DOMContentLoaded', () => {
+        const burgerInput = document.getElementById('burger');
+        if (burgerInput) {
+            burgerInput.addEventListener('click', toggleMenu);
+        }
+    });
 
     //Change slider document.addEventListener('DOMContentLoaded', () => {
     let currentSlide = 0;
@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const interval = 3000; // Time in milliseconds for each slide
 
     function showNextSlide() {
-      slides[currentSlide].checked = false;
-      currentSlide = (currentSlide + 1) % totalSlides;
-      slides[currentSlide].checked = true;
+        slides[currentSlide].checked = false;
+        currentSlide = (currentSlide + 1) % totalSlides;
+        slides[currentSlide].checked = true;
     }
 
     setInterval(showNextSlide, interval);
@@ -114,15 +114,15 @@ if (prev) {
 }
 
 function randomColor(type) {
-  var c;
-  if (type == "bright") {
-    c = randomNumber(130, 255);
-  } else {
-    c = randomNumber(110, 190);
-  }
-  return "rgb(" + c + "," + c + "," + c + ")";
+    var c;
+    if (type == "bright") {
+        c = randomNumber(130, 255);
+    } else {
+        c = randomNumber(110, 190);
+    }
+    return "rgb(" + c + "," + c + "," + c + ")";
 }
 
 function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }

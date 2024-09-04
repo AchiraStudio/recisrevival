@@ -1,5 +1,7 @@
 @font-face {
     font-family: Poppins;
+    font-weight: 1 1000;
+    font-style: no;
     src: url(../fonts/Poppins-Regular.ttf);
 }
 
@@ -25,7 +27,7 @@ body {
 
 .img {
     position: relative;
-    width: 600px;
+    width: 34%;
     height: 100%;
     background-color: black;
     transition: .4s;
@@ -122,84 +124,97 @@ background: linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endColorstr="#f24208",GradientType=1);
 }
 
-#one-android {
+#one-android, #two-android, #three-android {
     display: none;
 }
-#two-android {
-    display: none;
-}
-#three-android {
-    display: none;
-}
-
 @media screen and (max-width: 431px) {
     body {
-        overflow: visible;
+        max-height: 100vh;
+    }
+
+    .title {
+        text-align: center;
     }
 
     .container {
         flex-direction: column;
+        max-height: 100vh;
+        overflow: hidden;
     }
 
     .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100vh;
-        transition: .4s;
+        transition: transform 0.4s ease;
         z-index: 1;
+        position: relative;
+        overflow: hidden;
     }
 
-    #one .text {
+    #one, #two, #three {
         display: none;
     }
 
-    #three .text {
-        display: none;
-    }
-
-    #two .text {
-        display: none;
-    }
-
-    #one {
-        display: none;
-    }
-
-    #two {
-        display: none;
-    }
-
-    #three {
-        display: none;
+    #one-android, #two-android, #three-android {
+        display: flex;
+        transform-origin: top;
+        transition: background-color 0.4s ease, transform 0.4s ease;
     }
 
     #one-android {
-        display: flex;
         background: blue;
-        transform-origin: top;
-        transition: .4s;
     }
 
     #two-android {
-        display: flex;
         background: white;
-        transform-origin: top;
-        transition: .4s;
+        transform-origin: center;
     }
 
     #three-android {
-        display: flex;
         background: black;
-        transform-origin: top;
-        transition: .4s;
+        transform-origin: bottom;
     }
 
+    /* Active states with black background transition */
+    .img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        z-index: 1;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    #one-android.active::before,
+    #two-android.active::before,
+    #three-android.active::before {
+        opacity: 1;
+        animation: fade-out 0.4s forwards;
+    }
+
+    @keyframes fade-out {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    /* Individual active backgrounds */
     #one-android.active {
         background: green;
         position: absolute;
         z-index: 2;
         height: 100vh;
         width: 100%;
-        transition: .4s;
     }
 
     #two-android.active {
@@ -208,7 +223,6 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 2;
         height: 100vh;
         width: 100%;
-        transition: .4s;
     }
     
     #three-android.active {
@@ -217,16 +231,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         z-index: 2;
         height: 100vh;
         width: 100%;
-        transition: .4s;
     }
 
+    /* Text styling */
     .img .text {
         z-index: 0;
         height: 100%;
         width: 200px;
         background-color: rgba(151, 124, 124, 0.192);
-        backdrop-filter: blur(5px); /* Blurring effect */
-            -webkit-backdrop-filter: blur(5px); /* Safari support */
+        backdrop-filter: blur(5px);
         position: absolute;
         right: 0;
         box-shadow: inset -10px 0 15px rgba(0, 0, 0, 0.5);
@@ -237,11 +250,12 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         flex-direction: column;
         transition: .5s;
         display: none;
+        z-index: 3;
     }
 
     .img:hover .text {
         width: 200px;
         font-size: inherit;
+        z-index: 3;
     }
-    
 }

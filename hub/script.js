@@ -1,25 +1,37 @@
+// Track the currently active .img element
+let activeImg = null;
+
+// Click event listener for .img elements
 document.querySelectorAll('.img').forEach(img => {
-    img.addEventListener('click', function() {
-        if (this.classList.contains('active')) {
+    img.addEventListener('click', function(event) {
+        // If the click is on the .text element or its children, stop propagation
+        if (event.target.closest('.text')) {
+            event.stopPropagation();
+            return;
+        }
+        
+        // If the clicked .img is already active, remove active class
+        if (activeImg === this) {
             this.classList.remove('active');
+            activeImg = null;
         } else {
-            // Remove 'active' class from all images before adding it to the clicked one
-            document.querySelectorAll('.img').forEach(i => i.classList.remove('active'));
+            // Remove 'active' class from the previously active .img
+            if (activeImg) {
+                activeImg.classList.remove('active');
+            }
+            // Add 'active' class to the clicked .img
             this.classList.add('active');
+            activeImg = this;
         }
     });
 });
 
-function checkScreenWidth() {
-    const imgElement = document.getElementById('one');
-    
-    if (window.innerWidth <= 431) {
-        imgElement.classList.add('disable-hover');
-    } else {
-        imgElement.classList.remove('disable-hover');
+// Click event listener for the document to handle clicks outside .img
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.img')) {
+        if (activeImg) {
+            activeImg.classList.remove('active');
+            activeImg = null;
+        }
     }
-}
-
-// Run the function on page load and on window resize
-window.addEventListener('load', checkScreenWidth);
-window.addEventListener('resize', checkScreenWidth);
+});
