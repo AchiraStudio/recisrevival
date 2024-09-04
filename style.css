@@ -424,7 +424,7 @@ background: linear-gradient(180deg, rgba(187,183,255,1) 0%, rgba(223,71,11,1) 10
 }
 
 #wide-screen #main .text .revival:hover {
-	animation: continuous-rotate 2s linear infinite;
+	animation: continuous-rotate 5s linear infinite;
 	animation-play-state: running;
 }
 @keyframes continuous-rotate {

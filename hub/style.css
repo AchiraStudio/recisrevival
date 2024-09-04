@@ -21,45 +21,55 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .img {
     position: relative;
-    width: 300px;
-    height: 90%;
+    width: 600px;
+    height: 100%;
     background-color: black;
-    border-radius: 50px;
-    transition: ease-in-out .4s;
+    transition: .4s;
     overflow: hidden;
 }
 
 #one {
     background: url(assets/artist-cover\(nonhver\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform-origin: left;
 }
 
 #one:hover {
     background: url(assets/artist-cover.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+#two {
+    transform-origin: center;
+    background-color: white;
+}
+
+#three {
+    transform-origin: right;
+}
 .img:hover {
-    width: 800px;
+    width: 2000px;
     display: flex;
 }
 
 .img:hover .text {
     display: flex;
     color: white;
-}
-.img:hover ~ .img,
-.img:not(:hover) {
-    width: 200px; /* Shrinks all non-hovered boxes */
+    padding: 40px;
 }
 
 .img .text {
     z-index: 0;
     height: 100%;
-    width: 400px;
+    width: 200px;
     background-color: rgba(151, 124, 124, 0.192);
     backdrop-filter: blur(5px); /* Blurring effect */
         -webkit-backdrop-filter: blur(5px); /* Safari support */
@@ -76,7 +86,7 @@ body {
 }
 
 .img .text:hover {
-    width: 500px;
+    width: 300px;
     font-size: larger;
 }
 
@@ -111,8 +121,50 @@ background: linear-gradient(135deg, rgba(95,12,122,1) 0%, rgba(10,166,156,1) 33%
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endColorstr="#f24208",GradientType=1);
 }
 
-.wip {
-    position: absolute;
-    text-align: center;
-    font-size: 70px;
+@media screen and (max-width: 431px) {
+    body {
+        overflow: visible;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .img {
+        width: 100%;
+        height: 900px;
+        transition: .4s;
+    }
+
+    .img.active {
+        background: url(assets/artist-cover.jpg);
+        position: absolute;
+        z-index: 2;
+        height: 100vh;
+        width: 100%;
+        transition: .4s;
+    }
+
+    .img:hover {
+        background: inherit;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+    }
+
+    .img:hover .text {
+        display: none;
+    }
+
+    #one {
+        transform-origin: top;
+    }
+
+    #two {
+        transform-origin: center;
+    }
+
+    #three {
+        transform-origin: bottom;
+    }
 }
