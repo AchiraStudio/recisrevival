@@ -9,3 +9,17 @@ document.querySelectorAll('.img').forEach(img => {
         }
     });
 });
+
+function checkScreenWidth() {
+    const imgElement = document.getElementById('one');
+    
+    if (window.innerWidth <= 431) {
+        imgElement.classList.add('disable-hover');
+    } else {
+        imgElement.classList.remove('disable-hover');
+    }
+}
+
+// Run the function on page load and on window resize
+window.addEventListener('load', checkScreenWidth);
+window.addEventListener('resize', checkScreenWidth);
