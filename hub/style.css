@@ -258,11 +258,13 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5f0c7a",endCo
         display: none;
         z-index: 3;
         overflow: hidden;
+        transition: .4s;
     }
 
     .img:hover .text {
         width: 200px;
         font-size: inherit;
         z-index: 3;
+        transition: .4s;
     }
 }
