@@ -637,19 +637,7 @@ nav a:hover {
 	background: linear-gradient(90deg, rgba(250,139,19,1) 0%, rgba(85,91,180,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa8b13",endColorstr="#555bb4",GradientType=1);
 }
-/* #container1 {
-	left: 0;
-	margin-left: 5%;
-}
-#container2 {
-	right: 0;
-	background-image: url(assets/test.jpg);
-	background-position: center;
-	background-size: cover;
-	margin-right: 5%;
-	display: none;
-}
-*/
+
 #wide-screen #main .container .text {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -1666,4 +1654,9 @@ nav a:hover {
 }
 ::-webkit-scrollbar {
 	display: none;
+}
+
+.artis {
+	min-height: 100vh;
+	width: 100%;
 }

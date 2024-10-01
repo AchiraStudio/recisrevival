@@ -139,13 +139,13 @@ body {
     opacity: 1;
 }
 
-/* Arrash&Raissa */
+/*Raissa */
 
 .utama .pendamping {
     position: relative;
     height: 60vh;
-    background: url(assets/arrash&raissa.jpg);
-    background-position: center;
+    background: url(assets/raissa.jpeg);
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -167,12 +167,8 @@ body {
     opacity: 1;
 }
 
-#arrash {
-    left: 0;
-}
-
 #raissa {
-    right: 0;
+    left: 0;
 }
 
 .utama .side:hover {
