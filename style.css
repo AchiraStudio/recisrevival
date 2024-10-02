@@ -1659,4 +1659,22 @@ nav a:hover {
 .artis {
 	min-height: 100vh;
 	width: 100%;
+	background: rgb(2,0,36);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(2,0,36,1)), color-stop(0%, #df470b), color-stop(20%, rgba(160,51,34,1)), color-stop(47%, rgba(20,34,214,1)), color-stop(73%, rgba(29,10,138,1)));
+	background: -o-linear-gradient(top, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#1d0a8a",GradientType=1);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container-art {
+	position: relative;
+	width: 95%;
+	height: 80vh;
+	border-radius: 30px;
+	background-color: white;
 }
