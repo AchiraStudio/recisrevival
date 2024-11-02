@@ -96,6 +96,7 @@ function unavailable() {
 
 function mainDown() {
   window.location.href = "#artis"
+  window.location.href = "#artisan"
 }
 
 function gotoHome() {
