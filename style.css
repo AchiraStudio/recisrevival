@@ -1,9 +1,9 @@
 /** Prefixed boyy*/
 @font-face {
-	font-family: Spring;
+	font-family: breety;
 	font-weight: 1 1000;
     font-style: normal;
-	src: url(fonts/Spring.ttf);
+	src: url(fonts/bretty-i.otf);
 }
 @font-face {
 	font-family: Poppins;
@@ -29,6 +29,30 @@ body {
 	font-family: 'Dongle', sans-serif;
 	margin: 0;
 	padding: 0;
+}
+
+.count {
+	width: 100%;
+	height: 300px;
+	color: white;
+}
+
+.count h1{
+	font-family: ZingBG;
+	font-size: 60px;
+	text-align: center;
+	background: rgb(227,246,14);
+background: -moz-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: -webkit-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endColorstr="#f27401",GradientType=1);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.count p {
+	font-size: 30px;
+	text-align: center;
 }
 .text-container {
 	z-index: 100;
@@ -171,7 +195,7 @@ body {
 	max-height: 100vh;
 	background-size: cover;
 	background-position: center;
-	overflow: overlay;
+	overflow: auto;
 }
 #logo {
 	font-size: 30px;
@@ -182,6 +206,14 @@ body {
 	-webkit-transform: translateY(-100%);
 	-ms-transform: translateY(-100%);
 	transform: translateY(-100%);
+}
+
+.pc-view {
+	display: block;
+}
+
+.android-view {
+	display: none;
 }
 header {
 	background-color: transparent;
@@ -213,7 +245,7 @@ header {
 .brand {
 	font-family: Breety;
 	font-size: 1.5rem;
-	margin-left: 20px;
+	margin-left: 10px;
 }
 nav {
 	display: -webkit-box;
@@ -244,7 +276,11 @@ nav h6 {
 	margin-top: 60%;
 	font-size: 11px;
 	color: #d6ccd5;
-	;
+	text-shadow: 
+        -1px -1px 0 #000,  /* Top-left shadow */
+         1px -1px 0 #000,  /* Top-right shadow */
+        -1px  1px 0 #000,  /* Bottom-left shadow */
+         1px  1px 0 #000;  /* Bottom-right shadow */
 }
 nav.active {
 	right: 0;
@@ -258,10 +294,16 @@ nav a {
 	-webkit-transition: .6s;
 	-o-transition: .6s;
 	transition: .6s;
+	text-shadow: 
+        -1px -1px 0 #000,  /* Top-left shadow */
+         1px -1px 0 #000,  /* Top-right shadow */
+        -1px  1px 0 #000,  /* Bottom-left shadow */
+         1px  1px 0 #000;  /* Bottom-right shadow */
 }
 nav a:hover {
 	color: black;
 	background-color: #ffffff49;
+	text-shadow: none;
 }
 .bottom-nav {
 	width: 100%;
@@ -684,12 +726,13 @@ nav a:hover {
 	align-items: center;
 }
 .one-bg {
-	min-height: 70vh;
-	overflow-y: hidden;
+	position: relative;
+	min-height: 150vh;
+	overflow-y: visible;
 	background: rgb(122,57,35);
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(122,57,35,1)), to(rgba(23,28,98,1)));
-	background: -o-linear-gradient(top, rgba(122,57,35,1) 0%, rgba(23,28,98,1) 100%);
-	background: linear-gradient(180deg, rgba(122,57,35,1) 0%, rgba(23,28,98,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(122,57,35,1)), to(#1422d6));
+	background: -o-linear-gradient(top, rgba(122,57,35,1) 0%, #1d0a8a 73%);
+	background: linear-gradient(180deg, rgba(122,57,35,1) 0%, #1d0a8a 73%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a3923",endColorstr="#171c62",GradientType=1);
 }
 /* Games */
@@ -702,6 +745,7 @@ nav a:hover {
 	-webkit-animation: switchSigns 2.5s infinite;
 	animation: switchSigns 2.5s infinite;
 	/* 2.5s = 0.5s per image x 5 images */
+	z-index: 5;
 }
 #games #one {
 	-webkit-animation-delay: 0s;
@@ -752,7 +796,7 @@ nav a:hover {
 	}
 }
 #games{
-	min-height: 100vh;
+	min-height: 120vh;
 	position: relative;
 	width: 100%;
 	margin: 0;
@@ -773,7 +817,7 @@ nav a:hover {
 	background: rgb(2,0,36);
 	background: -webkit-gradient(linear, left top, left bottom, from(rgba(2,0,36,1)), color-stop(0%, #df470b), color-stop(20%, rgba(160,51,34,1)), color-stop(47%, rgba(20,34,214,1)), color-stop(73%, rgba(29,10,138,1)));
 	background: -o-linear-gradient(top, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
-	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, #1422d6 47%, #1d0a8a 73%);
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#1d0a8a",GradientType=1);
 	z-index: 3;
 	overflow-x: hidden;
@@ -818,6 +862,7 @@ nav a:hover {
 }
 /* Guidebook */
 .buttongb {
+	z-index: 15;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -825,7 +870,7 @@ nav a:hover {
 	background: none;
 	color: #0f1923;
 	cursor: pointer;
-	position: relative;
+	position: absolute;
 	padding: 8px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
@@ -1023,7 +1068,7 @@ nav a:hover {
 /* end */
 /* footer */
 #footer {
-	background: rgba(29,10,138,1);
+	background: #030111;
 	/* background: #1e1c1c;
 	*/
 	color: #fff;
@@ -1100,6 +1145,14 @@ nav a:hover {
 #minecraft {
 	width: 20px;
 }
+
+.pcview{
+	display: block;
+}
+
+.anview{
+	display: none;
+}
 * {
 	scroll-behavior: smooth;
 }
@@ -1107,6 +1160,7 @@ nav a:hover {
 	#games {
 		max-height: 40vh;
 	}
+
 }
 @media screen and (max-width: 769px) {
 	.palm-left {
@@ -1166,8 +1220,57 @@ nav a:hover {
 		margin-bottom: 10%;
 	}
 	/* end */
+
+	.artis {
+		position: relative;
+		height: 120vh;
+	}
+	.container-art {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		width: 95%;
+		height: 100vh;
+		border-radius: 30px;
+		background-color: rgba(55, 20, 211, 0.205);
+		backdrop-filter: blur(10px);
+			/* Blurring effect */
+			-webkit-backdrop-filter: blur(10px);
+			box-shadow: 0px 1px 80px 8px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 1px 80px 8px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 80px 8px rgba(0,0,0,0.75);
+	z-index: 3;
+	overflow: hidden;
+	}
+	
+	.artis .cont {
+		width: 100%;
+		height: 50%;
+		z-index: 2;
+	}
+
+	.ran {
+		background: url(artis/assets/RAN-nb.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.raisa {
+		background: url(artis/assets/raissa.jpeg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 }
 @media screen and (max-width: 431px) {
+	.pc-view {
+		display: none;
+	}
+	
+	.android-view {
+		display: block;
+	}
 	nav {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -1315,8 +1418,8 @@ nav a:hover {
 	/* Games */
 	#games .sign-games {
 		position: absolute;
-		width: 450px;
-		height: 300px;
+		width: 350px;
+		height: 200px;
 		opacity: 0;
 		-webkit-animation: switchSigns 2.5s infinite;
 		animation: switchSigns 2.5s infinite;
@@ -1350,6 +1453,13 @@ nav a:hover {
 		z-index: 2;
 	}
 	/* end */
+	.artis {
+		height: 150vh;
+	}
+
+	.artis .container-art {
+		height: 130vh;
+	}
 }
 @media screen and (max-width: 376px) {
 	nav {
@@ -1652,18 +1762,20 @@ nav a:hover {
 	}
 	/* end */
 }
+
 ::-webkit-scrollbar {
 	display: none;
 }
 
 .artis {
-	min-height: 100vh;
+	min-height: 120vh;
 	width: 100%;
-	background: rgb(2,0,36);
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(2,0,36,1)), color-stop(0%, #df470b), color-stop(20%, rgba(160,51,34,1)), color-stop(47%, rgba(20,34,214,1)), color-stop(73%, rgba(29,10,138,1)));
-	background: -o-linear-gradient(top, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
-	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, #df470b 0%, rgba(160,51,34,1) 20%, rgba(20,34,214,1) 47%, rgba(29,10,138,1) 73%);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#1d0a8a",GradientType=1);
+	background: rgb(29,10,138);
+	background: -moz-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(3,1,17,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(3,1,17,1) 100%);
+	background: linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(3,1,17,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d0a8a",endColorstr="#030111",GradientType=1);
+
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -1671,10 +1783,1282 @@ nav a:hover {
 	flex-direction: column;
 }
 
-.container-art {
+.ran {
+	background: url(artis/assets/ran.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.raissa {
+	background: url(artis/assets/raissa.jpeg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 60vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ran {
 	position: relative;
-	width: 95%;
-	height: 80vh;
-	border-radius: 30px;
+	text-align: center;
+}
+
+.artis h1 {
+	font-family: breety;
+	color: red;
+}
+
+.artis p {
+	margin-top: 15px;
+	font-size: 15px;
+	color: white;
+}
+
+.raissa {
+	position: relative;
+	text-align: center;
+}
+
+.ran img {
+	position: absolute;
+	width: 120px;
+	margin-top: 22%;
+	right: 0;
+	margin-right: 23%;
+	rotate: 16deg;
+	z-index: 3;
+}
+
+.ran .side {
+	z-index: 4;
+	width: 50%;
+	height: 100%;
+	top: 0;
+	background-color: rgba(255, 255, 255, 0.075);
+	position: absolute;
+	right: 0;
+	backdrop-filter: blur(3px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(3px);
+	/* Safari support */
+	box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+transition: .4s;
+}
+
+.artis .side {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.raissa .side {
+	width: 50%;
+	height: 100%;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.075);
+	position: absolute;
+	left: 0;
+	backdrop-filter: blur(3px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(3px);
+	/* Safari support */
+	box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+transition: .4s;
+}
+
+.raissa img {
+	position: absolute;
+	width: 180px;
+	margin-bottom: 20%;
+	left: 0;
+	margin-left: 9%;
+	rotate: -30deg;
+}
+
+.border svg {
+	position: absolute;
+	z-index: 3;
+}
+
+.top-top {
+	margin-bottom: 420px;
+	z-index: 2;
+}
+
+.down-down {
+	z-index: 1;
+	margin-top: 300px;
+	rotate: 180deg;
+	transform: rotateY(360deg);
+}
+
+.border {
+	height: 210px;
+	z-index: 5;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.rannb {
+	position: absolute;
+	margin-top: 3px;
+	z-index: 6;
+	right: 0;
+	rotate: 14deg;
+	width: 450px;
+}
+
+.raissanb {
+	position: absolute;
+	margin-top: 5px;
+	z-index: 6;
+	left: 0;
+	margin-left: 10%;
+	rotate: -14deg;
+	width: 260px;
+}
+
+@keyframes rotate {
+	0% {
+	  transform: rotateY(0deg);
+	}
+	50% {
+	  transform: rotateY(180deg);
+	}
+	100%{
+		transform: rotateY(360deg);
+	}
+  }
+
+@font-face {
+    font-family: bretty;
+    font-weight: 1 1000;
+    font-style: normal;
+    src: url(../fonts/bretty-i.otf);
+}
+
+.mett {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+
+/* Card */
+/* Spotify music card made by: csozi | Website: www.csozi.hu*/
+
+.mett .card {
+	margin-top: 450px;
+	position: absolute;
+	width: 450px;
+	height: 210px;
+	background: transparent;
+	backdrop-filter: blur(3px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(3px);
+	/* Safari support */
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: -1px 0px 95px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: -1px 0px 95px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 95px 2px rgba(0,0,0,0.75);
+  }
+  
+  .top {
+	position: relative;
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+  }
+  
+  .pfp {
+	position: relative;
+	margin: 10px;
+	top: 5px;
+	left: 5px;
+	height: 40px;
+	width: 40px;
+	background-color: #d2d2d2;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .title-1 {
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	font-weight: bolder;
+  }
+  
+  .title-2 {
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+  }
+  
+  .time {
+	width: 90%;
+	background-color: #5e5e5e;
+	height: 6px;
+	border-radius: 3px;
+	position: absolute;
+	left: 5%;
+	bottom: 22px;
+  }
+  
+  .elapsed {
+	width: 42%;
+	background-color: #1db954;
+	height: 100%;
+	border-radius: 3px;
+  }
+  
+  .controls {
+	color: white;
+	display: flex;
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	width: 100%;
+	justify-content: center;
+  }
+  
+  .volume {
+	height: 100%;
+	width: 48px;
+  }
+  
+  .air {
+	height: 100%;
+	width: 48px;
+  }
+  
+  .controls svg {
+	cursor: pointer;
+	transition: 0.1s;
+  }
+  
+  .controls svg:hover {
+	color: #1db954;
+  }
+  
+  .volume {
+	opacity: 0;
+	position: relative;
+	transition: 0.2s;
+  }
+  
+  .volume .slider {
+	height: 4px;
+	background-color: #5e5e5e;
+	width: 80%;
+	border-radius: 2px;
+	margin-top: 8px;
+	margin-left: 10%;
+  }
+  
+  .volume .slider .green {
+	background-color: #1db954;
+	height: 100%;
+	width: 80%;
+	border-radius: 3px;
+  }
+  
+  .volume .circle {
 	background-color: white;
+	height: 6px;
+	width: 6px;
+	border-radius: 3px;
+	position: absolute;
+	right: 20%;
+	top: 60%;
+  }
+  
+  .volume_button:hover ~ .volume {
+	opacity: 1;
+  }
+  
+  .timetext {
+	color: white;
+	font-size: 8px;
+	position: absolute;
+  }
+  
+  .time_now {
+	bottom: 11px;
+	left: 10px;
+  }
+  
+  .time_full {
+	bottom: 11px;
+	right: 10px;
+  }
+  
+  .playing {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	gap: 1px;
+	width: 30px;
+	height: 20px;
+  }
+  
+  .greenline {
+	background-color: #1db954;
+	height: 20px;
+	width: 2px;
+	position: relative;
+	transform-origin: bottom;
+  }
+  
+  .line-1 {
+	animation: infinite playing 1s ease-in-out;
+	animation-delay: 0.2s;
+  }
+  
+  .line-2 {
+	animation: infinite playing 1s ease-in-out;
+	animation-delay: 0.5s;
+  }
+  
+  .line-3 {
+	animation: infinite playing 1s ease-in-out;
+	animation-delay: 0.6s;
+  }
+  
+  .line-4 {
+	animation: infinite playing 1s ease-in-out;
+	animation-delay: 0s;
+  }
+  
+  .line-5 {
+	animation: infinite playing 1s ease-in-out;
+	animation-delay: 0.4s;
+  }
+  
+  @keyframes playing {
+	0% {
+	  transform: scaleY(0.1);
+	}
+  
+	33% {
+	  transform: scaleY(0.6);
+	}
+  
+	66% {
+	  transform: scaleY(0.9);
+	}
+  
+	100% {
+	  transform: scaleY(0.1);
+	}
+  }
+
+  .border1 {
+	padding-top: 10%;
+	background: linear-gradient(90deg, #FFCC00, #FF66CC, #6699FF, #9933FF, #66CCFF);
+  }
+
+  .border1 .top-top {
+	margin-bottom: 600px;
+  }
+
+  .border2 {
+	background-color: #CECECE;
+	height: 400px;
+	overflow-x: hidden;
+  }
+
+  .border2 .down-down {
+	margin-top: 600px;
+  }
+
+  .border3 {
+	margin-bottom: 0;
+  }
+
+  .border3 svg {
+	z-index: 1;
+	position: absolute;
+	margin-top: 5%;
+  }
+
+  .filler {
+	background: linear-gradient(90deg, #FFCC00, #FF66CC, #6699FF, #9933FF, #66CCFF);
+	height: 400px;
+	width: 100vw;
+  }
+
+  #comps {
+	width: 100%;
+	min-height: 100vh;
+	background: url(assets/5896404.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	z-index: 11;
+}
+
+.android-comp {
+	display: none;
+}
+
+.left-segs {
+	background-color: transparent;
+	min-height: 100vh;
+	width: 50%;
+	left: 0;
+	position: relative;
+}
+
+.right-segs {
+	background-color: transparent;
+	min-height: 100vh;
+	width: 50%;
+	right: 0;
+	position: relative;
+}
+
+.segs {
+	width: 100%;
+	height: 40vh;
+	display: flex;
+	position: relative;
+	z-index: 10;
+}
+
+.segs .text-seg {
+	z-index: 3;
+	width: 60%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+	align-items: center;
+	box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+position: absolute;
+height: 100%;
+}
+
+/* Classes in segs */
+
+.esports .picture {
+	right: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/esports.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.esports .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+}
+
+.futsal .picture {
+	left: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/futsal.JPG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.futsal .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+	right: 0;
+}
+
+.basket-putra .picture {
+	right: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/basket\ putra.JPG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.basket-putra .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+}
+.basket-putri .picture {
+	left: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/md.JPG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.basket-putri .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+	right: 0;
+}
+
+.band .picture {
+	right: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/band.JPG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.band .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+}
+
+.volley .picture {
+	left: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: url(assets/volley.JPG);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.volley .text-seg {
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(15px);
+	/* Safari support */
+	right: 0;
+}
+
+.merch {
+	width: 100%;
+	height: 100vh;
+	background: #0d0d71;
+background: -moz-linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
+background: linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0d71",endColorstr="#030111",GradientType=1);
+	position: relative;
+}
+
+.title-merch {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-right: 200px;
+	color: #3dff2b;
+	margin-bottom: 200px;
+	font-size: 20px;
+	z-index: 5;
+}
+
+.merch .contain-merch {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.merches {
+	width: 43%;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 200px;
+}
+
+.merches img {
+	width: 200px;
+	margin: 40px;
+}
+
+.coin1 {
+	z-index: 0;
+	position: absolute;
+	width: 500px;
+	left: 0;
+	top: 0;
+
+}
+
+.coin2 {
+	z-index: 0;
+	position: absolute;
+	width: 600px;
+	right: 0;
+	bottom: 0;
+	margin-bottom: 300px;
+}
+
+.title-merch .btn-main {
+	background-image: -o-linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+	background-image: linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
+	z-index: 6;
+}
+.title-merch .btn-main {
+	position: relative;
+	margin: 10px;
+	padding: 15px 30px;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-transition: 0.5s;
+	-o-transition: 0.5s;
+	transition: 0.5s;
+	background-size: 100% auto;
+	color: white;
+	border-radius: 10px;
+	display: block;
+	border: 0px;
+	font-size: 30px;
+	font-weight: 700;
+	-webkit-box-shadow: 0px 0px 14px -7px #f09819;
+	box-shadow: 0px 0px 14px -7px #f09819;
+	text-decoration: none;
+	z-index: 6;
+	transition: 0.5s;
+	border: 3px solid #000;
+}
+
+.title-merch .btn-main:hover {
+	-webkit-transform: scale(0.95);
+	-ms-transform: scale(0.95);
+	transform: scale(0.95);
+	z-index: 6;
+	background: rgb(250,139,19);
+	background: -webkit-gradient(linear, left top, right top, from(rgba(250,139,19,1)), to(rgba(85,91,180,1)));
+	background: -o-linear-gradient(left, rgba(250,139,19,1) 0%, rgba(85,91,180,1) 100%);
+	background: linear-gradient(90deg, rgba(250,139,19,1) 0%, rgba(85,91,180,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fa8b13",endColorstr="#555bb4",GradientType=1);
+}
+
+.ancomp {
+	position: relative;
+	display: none;
+	background: rgb(227,246,14);
+background: -moz-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(39,114,235,1) 18%, rgba(61,233,224,1) 40%, rgba(222,17,230,1) 60%, rgba(194,61,26,1) 81%, rgba(242,116,1,1) 100%);
+background: -webkit-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(39,114,235,1) 18%, rgba(61,233,224,1) 40%, rgba(222,17,230,1) 60%, rgba(194,61,26,1) 81%, rgba(242,116,1,1) 100%);
+background: linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(39,114,235,1) 18%, rgba(61,233,224,1) 40%, rgba(222,17,230,1) 60%, rgba(194,61,26,1) 81%, rgba(242,116,1,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endColorstr="#f27401",GradientType=1);
+	min-height: 60vh;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.ancomp .card {
+	border-radius: 30px;
+	position: relative;
+	margin-top: 15px;
+	width: 85%;
+	height: 300px;
+	background-color: blue;
+	margin-bottom: 15px;
+	overflow: hidden;
+	box-shadow: 0px 0px 72px -21px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 72px -21px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 72px -21px rgba(0,0,0,0.75);
+}
+
+.text-card {
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: rgba(255, 255, 255, 0.267);
+	backdrop-filter: blur(2px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(2px);
+	/* Safari support */
+	bottom: 0;
+	transition: .4s;
+	color: white;
+}
+
+.text-card .preview h1 {
+	font-weight: 1000;
+	text-align: center;
+	font-size: 25px;
+}
+
+.text-card .preview p {
+	padding: 1.3%;
+	font-size: 12px;
+	text-align: center;
+}
+
+.text-card .preview {
+	display: block;
+}
+
+.text-card .legit-content {
+	display: none;
+}
+
+.card:hover .preview {
+    display: none;
+}
+
+.card:hover .legit-content {
+    display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.legit-content p {
+	padding: 5%;
+}
+.card:hover .text-card {
+	height: 90%;
+	background-color: rgba(255, 255, 255, 0.267);
+	backdrop-filter: blur(2px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(2px);
+	/* Safari support */
+	box-shadow: 0px 0px 39px 11px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 39px 11px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 39px 11px rgba(0,0,0,0.75);
+}
+
+.ancomp .card {
+	background-position: -180px;
+	background-size: 250%;
+	transition:all 0.5s ;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+}
+
+.ancomp .card:hover {
+	background-position: -270px;
+	background-size: 300%;
+}
+
+.ancomp .esports {
+	background-image: url(assets/esports.png);
+}
+
+.ancomp .band {
+	background-image: url(assets/band.JPG);
+	background-position: -190px -350px;
+	background-size: 260%;
+}
+
+.ancomp .basketpa {
+	background-image: url(assets/basket\ putra.JPG);
+}
+
+.ancomp .basketpu {
+	background-image: url(assets/basket\ putri.JPG);
+	background-position: -300px 0p 250px;
+	background-size: 260%;
+}
+
+.ancomp .futsal {
+	background-image: url(assets/futsal.JPG);
+}
+
+.ancomp .voli {
+	background-image: url(assets/volley.JPG);
+	background-size: 100%;
+	background-position: right;
+}
+
+.card:hover .voli {
+	background-image: url(assets/volley.JPG);
+	background-size: 130%;
+	background-position: center;
+}
+
+.ancomp .md {
+	background-image: url(assets/md.JPG);
+	background-position: center;
+}
+
+.ancomp svg {
+	top: 0;
+	width: 200%;
+	overflow: hidden;
+	filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
+}
+
+.artisan {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #CECECE;
+	transition:all 0.5s ;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+}
+
+.artisan svg {
+	width: 200%;
+	overflow: hidden;
+	filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.3));
+	top: 0;
+	position: absolute;
+}
+
+.artisan .ancont {
+	border-radius: 10px;
+	width: 93%;
+	height: 60vh;
+	background-color: #CECECE;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 53px -11px rgba(0,0,0,0.75);
+}
+
+.ancont .txt {
+	position: absolute;
+	bottom: 0;
+	height: 30%;
+	width: 100%;
+	background-color: #cecece29;
+	backdrop-filter: blur(5px);
+	/* Blurring effect */
+	-webkit-backdrop-filter: blur(5px);
+	/* Safari support */
+	transition: .4s;
+	box-shadow: 0px -41px 118px -33px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px -41px 118px -33px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px -41px 118px -33px rgba(0,0,0,0.75);
+}
+
+.ancont:hover .txt {
+	height: 80%;
+}
+
+.ancont:hover {
+	background-size: 200%;
+	background-position: -110px;
+}
+
+.ancont:hover .preview {
+	display: none;
+}
+
+.ancont .preview {
+	text-align: center;
+}
+
+.ancont .preview h1 {
+	font-family: breety;
+	color: red;
+}
+
+.ancont .preview p {
+	color: white;
+}
+
+.ancont .legit-content {
+	display: none;
+}
+
+.ancont:hover .legit-content {
+	display: block;
+	text-align: center;
+}
+
+.ancont .legit-content h1 {
+	font-family: breety;
+	color: red;
+}
+
+.ancont .legit-content p {
+	font-size: 15px;
+	color: white;
+}
+
+.ancont{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.ranan {
+	transition:all 0.5s ;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+	background-image: url(artis/assets/ranan.jpg);
+	background-position: -45px;
+	background-size: 150%;
+	background-repeat: no-repeat;
+	margin-top: 250px;
+}
+
+.raissan {
+	transition:all 0.5s ;
+  -webkit-transition:all 0.5s ;
+  -o-transition:all 0.5s ;
+  -moz-transition:all 0.5s ;
+	background-image: url(artis/assets/raissaan.jpg);
+	background-position: center;
+	background-size: 150%;
+	background-repeat: no-repeat;
+}
+
+.raissa:hover {
+	background-position: center;
+}
+
+.bord {
+	position: absolute;
+	top: 0;
+}
+@media screen and (max-width: 1441px) {
+	.border3 svg {
+		margin-top: 50px;
+	}
+
+	.merches {
+		width: 40%;
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 200px;
+	}
+
+	.coin1 {
+		position: absolute;
+		width: 500px;
+		left: 0;
+		top: 0;
+	}
+
+	.ran {
+		background: url(artis/assets/ran-second.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	#games {
+		max-height: 40vh;
+	}
+
+	.border1 {
+		padding-top: 25%;
+	}
+	
+	.segs .text-seg {
+		z-index: 3;
+		width: 50%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: white;
+		align-items: center;
+		box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 15px 14px 46px 0px rgba(0,0,0,0.75);
+	position: absolute;
+	height: 100%;
+	font-size: 13px;
+	padding: 5px;
+	}
+
+	.segs .picture {
+		width: 50%;
+	}
+
+	.border3 svg {
+		margin-top: 10px;
+	}
+
+	.merches {
+		width: 55%;
+		display: flex;
+		flex-wrap: wrap-reverse;
+		margin-bottom: 200px;
+	}
+
+	.merches img {
+		width: 150px;
+		margin: 40px;
+	}
+
+	.coin1 {		
+		width: 400px;
+	}
+
+	.coin2 {
+		width: 400px;
+	}
+
+	.title-merch {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-right: 50px;
+		color: #3dff2b;
+		margin-bottom: 200px;
+		font-size: 15px;
+	}
+
+	.title-merch .btn-main {
+		font-size: 20px;
+	}
+
+	.ran {
+		background: url(artis/assets/ran-second.jpg);
+		background-position: -200px;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+@media screen and (max-width: 769px) {
+	.count {
+		width: 100%;
+		position: relative;
+		margin-bottom: 500px;
+	}
+
+	.count h1 {
+		font-size: 30px;
+	}
+
+	.count p {
+		font-size: 30px;
+	}
+		.border1 {
+			padding-top: 30%;
+		}
+
+		.border2 {
+			background-color: #CECECE;
+			height: 400px;
+			overflow-x: hidden;
+		  }
+		
+		  .border2 .down-down {
+			margin-top: 65%;
+		  }
+
+		  .border3 svg {
+			z-index: 1;
+			position: absolute;
+			margin-top: 0;
+			margin-bottom: 7%;
+		  }
+
+		  .merches {
+			width: 75%;
+			display: flex;
+			flex-wrap: wrap-reverse;
+			margin-bottom: 200px;
+		}
+
+		.coin1 {		
+			width: 400px;
+		}
+	
+		.coin2 {
+			width: 400px;
+		}
+	
+		.title-merch {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+			color: #3dff2b;
+			margin-bottom: 200px;
+			font-size: 10px;
+			text-align: center;
+		}
+	
+		.title-merch .btn-main {
+			position: relative;
+			margin: 10px;
+			padding: 15px 30px;
+			text-align: center;
+			text-transform: uppercase;
+			-webkit-transition: 0.5s;
+			-o-transition: 0.5s;
+			transition: 0.5s;
+			background-size: 100% auto;
+			color: white;
+			border-radius: 10px;
+			display: block;
+			border: 0px;
+			font-size: 15px;
+			font-weight: 700;
+			-webkit-box-shadow: 0px 0px 14px -7px #f09819;
+			box-shadow: 0px 0px 14px -7px #f09819;
+			text-decoration: none;
+			z-index: 6;
+			transition: 0.5s;
+			border: 3px solid #000;
+		}
+}
+
+@media screen and (max-width: 431px) {
+
+	#comps {
+		display: none;
+	}
+
+	.border {
+		display: none;
+	}
+
+	.artis {
+		display: none;
+	}
+
+	.mett {
+		display: none;
+	}
+
+	.merch {
+		height: 70vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.merch .contain-merch {
+		margin-top: 200px;
+		flex-direction: column;
+	}
+
+	.merches img {
+		height: 85px;
+		width: 85px;
+	}
+
+	.merch .merches {
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		height: 50%;
+		width: 100%;
+	}
+
+	.title-merch {
+		margin-top: 140px;
+		margin-left: 35%;
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-right: 200px;
+		color: #3dff2b;
+		margin-bottom: 0;
+		font-size: 10px;
+		z-index: 5;
+	}
+
+	.bord {
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 200%;
+		overflow: hidden;
+		filter: drop-shadow(0px 40px 40px rgba(0, 0, 0, 0.3));
+	}
+
+	.ancomp {
+		display: flex;
+	}
+
+	.artisan {
+		display: flex;
+	}
+
+	.pcview{
+		display: none;
+	}
+	
+	.anview{
+		display: block;
+	}
+
+	.coin2 {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 321px) {
+	.merches img {
+		height: 75px;
+		width: 75px;
+	}
+}
+
+.buttons {
+	display: flex;
 }

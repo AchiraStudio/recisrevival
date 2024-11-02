@@ -67,6 +67,27 @@ function setRandomBackgrounds() {
   }
 }
 
+function adjustLinks() {
+  if (window.innerWidth <= 431) {
+    document.querySelector('a[href="#main"]').setAttribute('href', '#main');
+    document.querySelector('a[href="#games"]').setAttribute('href', '#games');
+    document.querySelector('a[href="#comps"]').setAttribute('href', '#compsan');
+    document.querySelector('a[href="#artis"]').setAttribute('href', '#artisan');
+    document.querySelector('a[href="#merch"]').setAttribute('href', '#merch');
+  } else {
+    document.querySelector('a[href="#main"]').setAttribute('href', '#main');
+    document.querySelector('a[href="#games"]').setAttribute('href', '#games');
+    document.querySelector('a[href="#compsan"]').setAttribute('href', '#comps');
+    document.querySelector('a[href="#artisan"]').setAttribute('href', '#artis');
+    document.querySelector('a[href="#merch"]').setAttribute('href', '#merch');
+  }
+}
+
+// Run the function when the page loads and when the window is resized
+window.addEventListener('load', adjustLinks);
+window.addEventListener('resize', adjustLinks);
+
+
 window.onload = setRandomBackgrounds;
 
 function unavailable() {
@@ -74,7 +95,7 @@ function unavailable() {
 }
 
 function mainDown() {
-  window.location.href = "#games"
+  window.location.href = "#artis"
 }
 
 function gotoHome() {

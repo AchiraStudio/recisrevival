@@ -45,6 +45,28 @@ function artis() {
 function gotoHub() {
     window.location.href = "hub/hub.html"
 }
+
+function rpnet(){
+    window.location.href = "https://reginapacis.sch.id/"
+}
+
+function spotras(){
+    window.location.href = "https://open.spotify.com/artist/11k3Y6uyixbyGfgPl8qZTZ?si=416721a1f18c4ab8"
+}
+
+function spotran(){
+    window.location.href = "https://open.spotify.com/artist/5DSVjHy2YWufmRUHBM3PLX?si=oP_VvVzdTwK4QO6YUcIbng"
+}
+
+function sma() {
+    window.location.href = "https://forms.gle/fCyv1KQQBnHodp617"
+}
+
+function smp() {
+    window.location.href = "https://forms.gle/DE2o5twsLptX8udY6"
+}
+
+
 // Change Image
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,3 +92,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Change image every 5 seconds
     setInterval(nextImage, 5000);
 });
+
+const elements = document.getElementsByClassName('side');
+
+// Loop through the elements and add click event listeners
+for (let i = 0; i < elements.length; i++) {
+    elements[i].addEventListener('click', function() {
+        // Toggle the opacity between 0 and 1
+        if (this.style.opacity === '0') {
+            this.style.opacity = '1';
+        } else {
+            this.style.opacity = '0';
+        }
+    });
+}
