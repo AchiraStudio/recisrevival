@@ -94,14 +94,13 @@ function unavailable() {
   window.location.href = "extra/unavailable.html"
 }
 
-function mainDown() {
-  if (window.innerHeight > 431) {
-    window.location.href = "#artis";
-  } else {
-    window.location.href = "#artisan";
-  }
+function mainDownPC() {
+  window.location.href = "#artis"
 }
 
+function mainDownAN() {
+  window.location.href = "#artisan"
+}
 
 function gotoHome() {
   window.location.href = "#main"

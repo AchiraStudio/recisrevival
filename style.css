@@ -1767,6 +1767,15 @@ nav a:hover {
 	display: none;
 }
 
+#pcbut {
+	display: block;
+}
+
+#anbut {
+	display: none;
+	opacity: 0;
+}
+
 .artis {
 	min-height: 120vh;
 	width: 100%;
@@ -2964,6 +2973,15 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 }
 
 @media screen and (max-width: 431px) {
+	#pcbut {
+		display: none;
+		opacity: 0;
+	}
+	
+	#anbut {
+		display: block;
+		opacity: 1;
+	}
 
 	#comps {
 		display: none;
