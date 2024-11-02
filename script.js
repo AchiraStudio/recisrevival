@@ -95,9 +95,13 @@ function unavailable() {
 }
 
 function mainDown() {
-  window.location.href = "#artis"
-  window.location.href = "#artisan"
+  if (window.innerHeight > 431) {
+    window.location.href = "#artis";
+  } else {
+    window.location.href = "#artisan";
+  }
 }
+
 
 function gotoHome() {
   window.location.href = "#main"
