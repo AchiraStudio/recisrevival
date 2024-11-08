@@ -3182,6 +3182,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 		padding-top: 200px;
 		padding-bottom: 300px;
 	}
+
+	.showruns .stageim h1 {
+		font-size: 50px;
+	}
 }
 
 @media screen and (max-width: 321px) {
