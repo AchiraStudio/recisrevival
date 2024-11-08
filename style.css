@@ -553,7 +553,7 @@ nav a:hover {
 	min-height: 100vh;
 	overflow-x: hidden;
 	background: rgb(187,183,255);
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(187,183,255,1)), to(rgba(223,71,11,1)));
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(187,183,255,1)), to(#df470b));
 	background: -o-linear-gradient(top, rgba(187,183,255,1) 0%, rgba(223,71,11,1) 100%);
 	background: linear-gradient(180deg, rgba(187,183,255,1) 0%, rgba(223,71,11,1) 100%);
 	z-index: 4;
@@ -2392,15 +2392,100 @@ height: 100%;
 	right: 0;
 }
 
+.showruns {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 50vh;
+	background: rgb(29,10,138);
+background: -moz-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(10,3,47,1) 100%);
+background: -webkit-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(10,3,47,1) 100%);
+background: linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(10,3,47,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1d0a8a",endColorstr="#0a032f",GradientType=1);
+}
+
+.showruns h1 {
+	font-family: ZingBG;
+	font-size: 60px;
+	text-align: center;
+	background: rgb(227,246,14);
+background: -moz-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: -webkit-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endColorstr="#f27401",GradientType=1);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.showruns .mc {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+.showruns .mc img {
+	width: 600px;
+	height: auto;
+}
+
+.showruns .stage {
+	height: 110vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+
+.showruns .stage h1 {
+	font-family: ZingBG;
+	font-size: 60px;
+	text-align: center;
+	background: rgb(227,246,14);
+background: -moz-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: -webkit-linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+background: linear-gradient(129deg, rgba(227,246,14,1) 0%, rgba(222,17,230,1) 50%, rgba(242,116,1,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endColorstr="#f27401",GradientType=1);
+  	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.showruns .stage .stageim {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.showruns .stage .stageim img {
+	width: 500px;
+	height: auto;
+	justify-content: space-evenly;
+}
 .merch {
 	width: 100%;
-	height: 100vh;
-	background: #0d0d71;
-background: -moz-linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
-background: -webkit-linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
-background: linear-gradient(180deg, rgba(13,13,113,1) 0%, rgba(3,1,17,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0d71",endColorstr="#030111",GradientType=1);
+	min-height: 100vh;
+	background: -webkit-gradient(linear, left top, left bottom, from(#df470b), to(#1422d6));
+	background: -o-linear-gradient(top, #df470b 0%, #1d0a8a 73%);
+	background: linear-gradient(180deg, #df470b 0%, #1d0a8a 73%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7a3923",endColorstr="#171c62",GradientType=1);
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.merch .sign-games {
+	margin-top: 100px;
+	top: 0;
+	width: 600px;
+	height: auto;
+	position: absolute;
+	align-items: center;
 }
 
 .title-merch {
@@ -2416,6 +2501,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0d71",endCo
 }
 
 .merch .contain-merch {
+	margin-top: 20%;
 	position: relative;
 	height: 100%;
 	width: 100%;
@@ -3007,6 +3093,16 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 		text-align: center;
 	}
 
+	.merch .sign-games {
+		margin-bottom: 10%;
+		width: 500px;
+		height: auto;
+	}
+
+	.coin1 {
+		margin-top: 50%;
+	}
+
 	.merch .contain-merch {
 		margin-top: 200px;
 		flex-direction: column;
@@ -3066,7 +3162,23 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 	}
 
 	.coin2 {
-		display: none;
+		position: absolute;
+		margin-top: 400px;
+		display: block;
+		bottom: 0;
+		width: 200px;
+	}
+
+	.showruns {
+		height: 250vh;
+	}
+
+	.showruns .mc h1 {
+		font-size: 50px;
+	}
+
+	.showruns .stageim {
+		flex-direction: column;
 	}
 }
 
@@ -3074,6 +3186,10 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 	.merches img {
 		height: 75px;
 		width: 75px;
+	}
+
+	.showruns .stage .stageim img {
+		width: 400px;
 	}
 }
 
