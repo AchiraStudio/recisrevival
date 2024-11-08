@@ -3179,6 +3179,8 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 
 	.showruns .stageim {
 		flex-direction: column;
+		padding-top: 200px;
+		padding-bottom: 300px;
 	}
 }
 
