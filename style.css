@@ -2397,7 +2397,7 @@ height: 100%;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	min-height: 50vh;
+	min-height: 100vh;
 	background: rgb(29,10,138);
 background: -moz-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(10,3,47,1) 100%);
 background: -webkit-linear-gradient(180deg, rgba(29,10,138,1) 0%, rgba(10,3,47,1) 100%);
@@ -2465,6 +2465,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 	width: 500px;
 	height: auto;
 	justify-content: space-evenly;
+	margin-bottom: 200px;
 }
 .merch {
 	width: 100%;
@@ -3170,17 +3171,19 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e3f60e",endCo
 	}
 
 	.showruns {
-		height: 250vh;
+		min-height: 350vh;
 	}
 
 	.showruns .mc h1 {
 		font-size: 50px;
 	}
 
+	.showruns .stage {
+		margin-top: 300px;
+	}
+
 	.showruns .stageim {
 		flex-direction: column;
-		padding-top: 200px;
-		padding-bottom: 300px;
 	}
 
 	.showruns .stageim h1 {
